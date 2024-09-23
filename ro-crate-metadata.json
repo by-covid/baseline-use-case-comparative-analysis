@@ -1,0 +1,1136 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/terms/workflow-run/context",
+    {
+      "buildInstructions": "https://codemeta.github.io/terms/buildInstructions"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "identifier": "ro-crate-metadata.json",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ],
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0035-6475"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-9842-9718"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis",
+      "description": "This publication corresponds to the <strong>local outputs</strong> and <strong>comparative analysis</strong>&nbsp;of the Baseline Use Case proposed in T.5.2 (WP5) in the&nbsp;<a href=\"https://by-covid.org/\">BY-COVID project</a>&nbsp;on&nbsp;&ldquo;<em>SARS-CoV-2&nbsp;Vaccine&nbsp;effectiveness in preventing SARS-CoV-2 infection.</em>&rdquo;</p>\n<p><strong>Research question</strong>: \"<em>How effective have the SARS-CoV-2 vaccination programmes been in preventing SARS-CoV-2 infections?</em>&rdquo;</p>\n<p><strong>Study design</strong>: An observational retrospective longitudinal (cohort) study using routinely collected population, health and care data from several countries/regions in Europe. We have designed the observational study to emulate a hypothetical Target Trial (TT) of the causal effect of SARS-CoV-2 vaccination programs in preventing SARS-CoV-2 infections.</p>\n<p>A <strong>federated analysis</strong> approach was adopted, with the secured distributed deployment of the interoperable analytical pipeline by different Participant Nodes (i.e., institutions hosting or having access to the required individual-level data). A detailed description of the data processing procedures and the security measures within the Secured Processing Environments (SPE) of each of the Participant Nodes is provided in the published <a href=\"../doi/10.5281/zenodo.7625783\">Data Management Plan (DMP)</a>. For more details on the methodological approach, see <a href=\"https://doi.org/10.1186/s12874-023-02068-3\">here</a>.&nbsp;</p>\n<p>The&nbsp;<strong>local outputs</strong> correspond with the <em>interactive reports</em> of each main step of the analytical pipeline described in '<a href=\"https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/blob/main/vaccine_effectiveness_analytical_pipeline/documentation/BY-COVID-WP5-BaselineUseCase-VE-documentation-analytical-pipeline.pdf\">Methods analytical pipeline</a>' and an <em>Excel file</em> used as input for the comparative analysis. They have been produced using real-world data from public health and the national health system in Aragon (Spain), Brussels and Wallonia (Belgium), and Finland.&nbsp;</p>\n<p>The <strong>scripts </strong>implementing the statistical analyses in the analytical pipeline are available on&nbsp;<a href=\"https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case\">GitHub</a>, with additional documentation supporting the development and implementation of the baseline use case.&nbsp;</p>\n<p><strong>Files </strong>included in this publication:&nbsp;</p>\n<ul>\n<li><strong><em>Local outputs produced by each Participant Node: </em></strong><em>6 interactive HTML reports (Human-readable, interactive report) + 1 XLSX file (Human-readable, Excel)</em>\n<ul>\n<li>Aragon v.1.0.0</li>\n<li>Brussels-Wallonia v.1.0.0</li>\n<li>Finland v.1.0.0&nbsp;</li>\n</ul>\n</li>\n<li><strong><em>Comparative analysis</em></strong>:&nbsp;\n<ul>\n<li>SARS-CoV-2 vaccine effectiveness comparative analysis results v.1.0.1 (HTML) - Interactive report</li>\n<li>SARS-CoV-2 vaccine effectiveness comparative analysis execution script v.1.0.1 (QMD) - Quarto RMarkdown script to execute the comparative analysis and produce the interactive report</li>\n</ul>\n</li>\n<li><strong><em>Reproducible environment using renv:</em></strong>\n<ul>\n<li>renv/ - Project environment with activation scripts</li>\n<li>renv.lock - Lockfile</li>\n<li>.Rprofile - Project R profile</li>\n</ul>\n</li>\n</ul>",
+      "identifier": "https://doi.org/10.5281/zenodo.11209362",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/process/0.5"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.5"
+        }
+      ],
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-4409-0664"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-6285-8120"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-7316-6990"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4842-1667"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3499-4800"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-8783-5478"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0961-3298"
+        }
+      ],
+      "datePublished": "2024-08-01",
+      "license": {
+        "@id": "https://spdx.org/licenses/CC-BY-4.0"
+      },
+      "publisher": {
+        "@id": "https://zenodo.org"
+      },
+      "inLanguage": {
+        "@id": "https://glottolog.org/resource/languoid/id/stan1293"
+      },
+      "temporalCoverage": [
+        "2020-03-01/2022-12-20"
+      ],
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3336899/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        },
+        {
+          "@id": "https://sws.geonames.org/660013/"
+        }
+      ],
+      "keywords": "COVID-19, Comparative effectiveness, International comparison, Causal inference, SARS-CoV-2",
+      "funding": {
+        "@id": "https://doi.org/10.3030/101046203"
+      },
+      "funder": {
+        "@id": "https://ror.org/00k4n6c32"
+      },
+      "hasPart": [
+        {
+          "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+        },
+        {
+          "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD"
+        },
+        {
+          "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html"
+        },
+        {
+          "@id": ".Rprofile"
+        },
+        {
+          "@id": "renv/"
+        },
+        {
+          "@id": "renv.lock"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "mentions": [
+        {
+          "@id": "#run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307"
+        },
+        {
+          "@id": "#run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c"
+        },
+        {
+          "@id": "#run-finland-740ece65-d94b-4247-8622-75d7b06c5512"
+        },
+        {
+          "@id": "#run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307"
+        }
+      ]
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4409-0664",
+      "@type": "Person",
+      "name": "Marjan Meurisse",
+      "givenName": "Marjan",
+      "familyName": "Meurisse",
+      "affiliation": {
+        "@id": "https://ror.org/04ejags36"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6285-8120",
+      "@type": "Person",
+      "name": "Francisco Estupiñán-Romero",
+      "givenName": "Francisco",
+      "familyName": "Estupiñán-Romero",
+      "affiliation": {
+        "@id": "https://ror.org/05p0enq35"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7316-6990",
+      "@type": "Person",
+      "name": "Nina Van Goethem",
+      "givenName": "Nina",
+      "familyName": "Van Goethem",
+      "affiliation": {
+        "@id": "https://ror.org/04ejags36"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4842-1667",
+      "@type": "Person",
+      "name": "Markus Perola",
+      "givenName": "Markus",
+      "familyName": "Perola",
+      "affiliation": {
+        "@id": "https://ror.org/03tf0c761"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3499-4800",
+      "@type": "Person",
+      "name": "Teemu Paajanen",
+      "givenName": "Teemu",
+      "familyName": "Paajanen",
+      "affiliation": {
+        "@id": "https://ror.org/03tf0c761"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8783-5478",
+      "@type": "Person",
+      "name": "Javier González-Galindo",
+      "givenName": "Javier",
+      "familyName": "González-Galindo",
+      "affiliation": {
+        "@id": "https://ror.org/05p0enq35"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0961-3298",
+      "@type": "Person",
+      "name": "Enrique Bernal-Delgado",
+      "givenName": "Enrique",
+      "familyName": "Bernal-Delgado",
+      "affiliation": {
+        "@id": "https://ror.org/05p0enq35"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0035-6475",
+      "@type": "Person",
+      "name": "Eli Chadwick",
+      "givenName": "Eli",
+      "familyName": "Chadwick",
+      "affiliation": {
+        "@id": "https://ror.org/027m9bs27"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9842-9718",
+      "@type": "Person",
+      "name": "Stian Soiland-Reyes",
+      "givenName": "Stian",
+      "familyName": "Soiland-Reyes",
+      "affiliation": {
+        "@id": "https://ror.org/027m9bs27"
+      }
+    },
+    {
+      "@id": "https://ror.org/04ejags36",
+      "@type": "Organization",
+      "name": "Sciensano"
+    },
+    {
+      "@id": "https://ror.org/05p0enq35",
+      "@type": "Organization",
+      "name": "Instituto Aragonés de Ciencias de la Salud"
+    },
+    {
+      "@id": "https://ror.org/03tf0c761",
+      "@type": "Organization",
+      "name": "Terveyden ja hyvinvoinnin laitos"
+    },
+    {
+      "@id": "https://ror.org/027m9bs27",
+      "@type": "Organization",
+      "name": "University of Manchester"
+    },
+    {
+      "@id": "https://zenodo.org",
+      "@type": "Organization",
+      "name": "Zenodo"
+    },
+    {
+      "@id": "https://ror.org/00k4n6c32",
+      "@type": "Organization",
+      "name": "European Commission"
+    },
+    {
+      "@id": "https://doi.org/10.3030/101046203",
+      "@type": "Grant",
+      "name": "BY-COVID - Beyond COVID (101046203)",
+      "funder": {
+        "@id": "https://ror.org/00k4n6c32"
+      }
+    },
+    {
+      "@id": "https://spdx.org/licenses/CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "@type": "CreativeWork",
+      "name": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4",
+      "@type": [
+        "Dataset",
+        "ComputationalWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/process"
+        }
+      ],
+      "name": "BY-COVID WP5 T5.2 Baseline Use Case",
+      "description": "This workflow is a separate RO-Crate available through WorkflowHub.",
+      "url": "https://workflowhub.eu/workflows/502/",
+      "distribution": {
+        "@id": "https://workflowhub.eu/workflows/502/ro_crate?version=4"
+      },
+      "version": "4",
+      "input": [
+        {
+          "@id": "#vaccine-effectiveness-data"
+        }
+      ],
+      "output": [
+        {
+          "@id": "#vaccine-effectiveness-reports"
+        }
+      ],
+      "programmingLanguage": {
+        "@id": "https://quarto.org/"
+      }
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/502/ro_crate?version=4",
+      "@type": "DataDownload",
+      "encodingFormat": [
+        "application/zip",
+        {
+          "@id": "https://www.nationalarchives.gov.uk/PRONOM/x-fmt/263"
+        }
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/process"
+        }
+      ]
+    },
+    {
+      "@id": "#vaccine-effectiveness-data",
+      "@type": "FormalParameter",
+      "name": "Vaccine effectiveness data for a region",
+      "valueRequired": true,
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3752"
+      },
+      "workExample": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/input/vaccine_effectiveness_synthetic_pop_10k_v.1.1.1.csv"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-reports",
+      "@type": "FormalParameter",
+      "name": "Collection of human-readable HTML and XLSX reports",
+      "additionalType": "Dataset",
+      "hasPart": [
+        {
+          "@id": "#vaccine-effectiveness-html-reports"
+        },
+        {
+          "@id": "#vaccine-effectiveness-xlsx-report"
+        }
+      ],
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      },
+      "workExample": {
+        "@id": "local_outputs/Aragon_1.0.0/"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-html-reports",
+      "@type": "FormalParameter",
+      "name": "6 interactive HTML reports (Human-readable, interactive report)",
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-xlsx-report",
+      "@type": "FormalParameter",
+      "name": "1 XLSX report (Human-readable, Excel)",
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      },
+      "workExample": {
+        "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+      }
+    },
+    {
+      "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD",
+      "@type": [
+        "File",
+        "ComputationalWorkflow"
+      ],
+      "version": "1.0.1",
+      "programmingLanguage": {
+        "@id": "https://quarto.org/"
+      },
+      "input": [
+        {
+          "@id": "#vaccine-effectiveness-xlsx-reports"
+        }
+      ],
+      "output": [
+        {
+          "@id": "#comparative-analysis-report"
+        }
+      ]
+    },
+    {
+      "@id": "#vaccine-effectiveness-xlsx-reports",
+      "@type": "FormalParameter",
+      "name": "1 or more XLSX reports on regional vaccine effectiveness",
+      "valueRequired": true,
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      },
+      "workExample": [
+        {
+          "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "#comparative-analysis-report",
+      "@type": "FormalParameter",
+      "name": "Interactive HTML report with comparative analysis",
+      "description": "Interactive HTML report comparing the input reports on vaccine effectiveness in different regions",
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      },
+      "workExample": {
+        "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html"
+      }
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/input/vaccine_effectiveness_synthetic_pop_10k_v.1.1.1.csv",
+      "@type": "File",
+      "name": "Synthetic dataset with 10k entries (CSV).",
+      "description": "Synthetic dataset with 10k entries (CSV). Not used for the workflow runs but shares a format with the workflow inputs.",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3752"
+      },
+      "exampleOfWork": "#vaccine-effectiveness-data",
+      "isPartOf": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      }
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile",
+      "@type": "File",
+      "name": "Dockerfile",
+      "description": "Dockerfile which may be used to create a container image for the workflow.",
+      "conformsTo": "https://docs.docker.com/reference/dockerfile/",
+      "encodingFormat": [
+        "text/plain",
+        "http://edamontology.org/format_1964"
+      ],
+      "isPartOf": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      }
+    },
+    {
+      "@id": "#container",
+      "@type": "FormalParameter",
+      "name": "A container with all pipeline dependencies installed",
+      "additionalType": "ContainerImage",
+      "workExample": [
+        {
+          "@id": "https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/pkgs/container/vaccine_effectiveness_analytical_pipeline_gui"
+        }
+      ]
+    },
+    {
+      "@id": "https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/pkgs/container/vaccine_effectiveness_analytical_pipeline_gui",
+      "@type": "CreativeWork",
+      "name": "by-covid/vaccine_effectiveness_analytical_pipeline_gui",
+      "description": "Docker container with workflow dependencies installed. Not used for the workflows but is built from the same Dockerfile.",
+      "registry": "ghcr.io",
+      "tag": "sha256:3a3ca9a6039c4bfa4d98e4a88deb2f6e7685a0bf593a3d3a70dafea42a3ac087",
+      "sha256": "3a3ca9a6039c4bfa4d98e4a88deb2f6e7685a0bf593a3d3a70dafea42a3ac087",
+      "exampleOfWork": "#container"
+    },
+    {
+      "@id": "#vaccine-effectiveness-aragon-126e7f43-fd41-45f0-b305-91f33b798ada",
+      "@type": "File",
+      "name": "Vaccine effectiveness data for Aragon region",
+      "temporalCoverage": "2020-03-01/2023-04-18",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/3336899/"
+      },
+      "description": "This entity is a placeholder as the raw data cannot be published for privacy reasons. All individuals vaccinated with at least one dose of the SARS-CoV-2 vaccine (any of the available brands) and all individuals eligible to be vaccinated with a documented positive diagnosis (irrespective of the type of test) for SARS-CoV-2 infection during the data extraction period are included in the study population.",
+      "exampleOfWork": "#vaccine-effectiveness-data"
+    },
+    {
+      "@id": "#container-aragon-f10ce172-e522-49c0-a9df-506932ea42c4",
+      "@type": "ContainerImage",
+      "additionalType": "DockerImage",
+      "name": "Docker container for Aragon region workflow run",
+      "description": "Docker container built by IACS from the workflow Dockerfile. This entity is a placeholder as the original container was not preserved.",
+      "author": {
+        "@id": "https://ror.org/05p0enq35"
+      },
+      "exampleOfWork": "#container",
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      }
+    },
+    {
+      "@id": "#run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307",
+      "@type": "CreateAction",
+      "name": "Run Workflow (Aragon region)",
+      "description": "Run on a Docker container and executed manually, script by script, due to limitations of the secure research environment in which the input data could be accessed.",
+      "instrument": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "containerImage": {
+        "@id": "#container-aragon-f10ce172-e522-49c0-a9df-506932ea42c4"
+      },
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      },
+      "provider": {
+        "@id": "https://ror.org/05p0enq35"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-8783-5478"
+      },
+      "object": {
+        "@id": "#vaccine-effectiveness-aragon-126e7f43-fd41-45f0-b305-91f33b798ada"
+      },
+      "result": {
+        "@id": "local_outputs/Aragon_1.0.0/"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "#vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277",
+      "@type": "File",
+      "name": "Vaccine effectiveness data for Brussels and Wallonia regions",
+      "temporalCoverage": "2020-09-01/2024-04-05",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        }
+      ],
+      "description": "This entity is a placeholder as the raw data cannot be published for privacy reasons. All individuals vaccinated with at least one dose of the SARS-CoV-2 vaccine (any of the available brands) and all individuals eligible to be vaccinated with a documented positive diagnosis (irrespective of the type of test) for SARS-CoV-2 infection during the data extraction period are included in the study population.",
+      "exampleOfWork": "#vaccine-effectiveness-data"
+    },
+    {
+      "@id": "#environment-brussels-wallonia-0179aa73-5217-40f8-8adc-1919a3ca716c",
+      "@type": "SoftwareApplication",
+      "name": "Environment for Brussels and Wallonia region workflow run",
+      "description": "Environment manually configured by Sciensano by installing packages from zipfiles. This entity is a placeholder as the original environment was not preserved.",
+      "author": {
+        "@id": "https://ror.org/04ejags36"
+      }
+    },
+    {
+      "@id": "#run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c",
+      "@type": "CreateAction",
+      "name": "Run Workflow (Brussels and Wallonia regions)",
+      "instrument": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "environment": {
+        "@id": "#environment-brussels-wallonia-0179aa73-5217-40f8-8adc-1919a3ca716c"
+      },
+      "provider": {
+        "@id": "https://ror.org/04ejags36"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4409-0664"
+      },
+      "object": {
+        "@id": "#vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277"
+      },
+      "result": {
+        "@id": "local_outputs/Brussels-Wallonia_1.0.0/"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "#vaccine-effectiveness-finland-1ade950f-234d-44f8-b2a4-71c5ca8480b3",
+      "@type": "File",
+      "name": "Vaccine effectiveness data for Finland region",
+      "temporalCoverage": "2020-01-01/2022-12-20",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/660013/"
+      },
+      "description": "This entity is a placeholder as the raw data cannot be published for privacy reasons. All individuals vaccinated with at least one dose of the SARS-CoV-2 vaccine (any of the available brands) and all individuals eligible to be vaccinated with a documented positive diagnosis (irrespective of the type of test) for SARS-CoV-2 infection during the data extraction period are included in the study population.",
+      "exampleOfWork": "#vaccine-effectiveness-data"
+    },
+    {
+      "@id": "#container-finland-3fdab2cf-6b6b-4473-8f79-453fbd32a472",
+      "@type": "ContainerImage",
+      "additionalType": "SIFImage",
+      "name": "Singularity Container for Finland region workflow run",
+      "description": "Container built by THL from the workflow Dockerfile. This entity is a placeholder as the original container was not preserved.",
+      "author": {
+        "@id": "https://ror.org/03tf0c761"
+      },
+      "exampleOfWork": "#container",
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      }
+    },
+    {
+      "@id": "#run-finland-740ece65-d94b-4247-8622-75d7b06c5512",
+      "@type": "CreateAction",
+      "name": "Run Workflow (Finland region)",
+      "instrument": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "containerImage": {
+        "@id": "#container-finland-3fdab2cf-6b6b-4473-8f79-453fbd32a472"
+      },
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      },
+      "provider": {
+        "@id": "https://ror.org/03tf0c761"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0003-3499-4800"
+      },
+      "startTime": "2024-04-19T05:33:49",
+      "endTime": "2024-04-19T16:47:05",
+      "object": {
+        "@id": "#vaccine-effectiveness-finland-1ade950f-234d-44f8-b2a4-71c5ca8480b3"
+      },
+      "result": {
+        "@id": "local_outputs/Finland_1.0.0/"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "#run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307",
+      "@type": "CreateAction",
+      "name": "Aggregate and compare regional results",
+      "instrument": [
+        {
+          "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD"
+        }
+      ],
+      "buildInstructions": [
+        {
+          "@id": "renv.lock"
+        },
+        {
+          "@id": ".Rprofile"
+        },
+        {
+          "@id": "renv/"
+        }
+      ],
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4409-0664"
+      },
+      "object": [
+        {
+          "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx"
+        }
+      ],
+      "result": {
+        "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      },
+      "temporalCoverage": "2020-03-01/2022-12-20",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3336899/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        },
+        {
+          "@id": "https://sws.geonames.org/660013/"
+        }
+      ]
+    },
+    {
+      "@id": ".Rprofile",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "R environment profile",
+      "programmingLanguage": {
+        "@id": "https://cran.r-project.org"
+      },
+      "exampleOfWork": {
+        "@id": "#R-profile"
+      }
+    },
+    {
+      "@id": "renv/",
+      "@type": [
+        "Dataset",
+        "SoftwareSourceCode"
+      ],
+      "name": "R environment with activation scripts"
+    },
+    {
+      "@id": "renv.lock",
+      "@type": "Dataset",
+      "name": "R environment lockfile",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3464"
+      },
+      "exampleOfWork": {
+        "@id": "#R-lockfile"
+      }
+    },
+    {
+      "@id": "#R-profile",
+      "@type": [
+        "FormalParameter",
+        "SoftwareSourceCode"
+      ],
+      "additionalType": "File",
+      "name": "R profile",
+      "workExample": {
+        "@id": ".Rprofile"
+      }
+    },
+    {
+      "@id": "#R-environment",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "name": "R environment",
+      "workExample": {
+        "@id": "renv/"
+      }
+    },
+    {
+      "@id": "#R-lockfile",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "R environment lockfile",
+      "workExample": {
+        "@id": "renv.lock"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/",
+      "@type": "Dataset",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/3336899/"
+      },
+      "hasPart": [
+        {
+          "@id": "local_outputs/Aragon_1.0.0/1_DQA.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/2_validation.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/3_imputation.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/4_matching.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/5_descriptive.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/6_survival-analysis.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/",
+      "@type": "Dataset",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/1_DQA.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/2_validation.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/3_imputation.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/4_matching.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/5_descriptives.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/6_survival-analysis.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/",
+      "@type": "Dataset",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/660013/"
+      },
+      "hasPart": [
+        {
+          "@id": "local_outputs/Finland_1.0.0/1_DQA.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/2_validation.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/3_imputation.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/4_matching.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/5_descriptive.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/6_survival-analysis.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/1_DQA.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/2_validation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/3_imputation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/4_matching.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/5_descriptive.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/6_survival-analysis.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/1_DQA.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/2_validation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/3_imputation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/4_matching.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/5_descriptives.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/6_survival-analysis.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/1_DQA.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/2_validation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/3_imputation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/4_matching.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/5_descriptive.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/6_survival-analysis.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      }
+    },
+    {
+      "@id": "https://sws.geonames.org/3336899/",
+      "@type": "AdministrativeArea",
+      "name": "Aragon, Spain"
+    },
+    {
+      "@id": "https://sws.geonames.org/2800867/",
+      "@type": "AdministrativeArea",
+      "name": "Brussels-Capital, Belgium"
+    },
+    {
+      "@id": "https://sws.geonames.org/3337387/",
+      "@type": "AdministrativeArea",
+      "name": "Wallonia, Belgium"
+    },
+    {
+      "@id": "https://sws.geonames.org/660013/",
+      "@type": "Country",
+      "name": "Finland"
+    },
+    {
+      "@id": "https://quarto.org/",
+      "@type": "ComputerLanguage",
+      "name": "Quarto Markdown",
+      "description": "Quarto Markdown with executable R code blocks",
+      "url": [
+        "https://quarto.org/docs/authoring/markdown-basics.html",
+        "https://quarto.org/docs/computations/r.html"
+      ]
+    },
+    {
+      "@id": "https://quarto.org/docs/download/",
+      "@type": "SoftwareApplication",
+      "name": "Quarto",
+      "url": "https://quarto.org/"
+    },
+    {
+      "@id": "https://w3id.org/ro/crate/1.1",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "RO-Crate",
+      "version": "1.1"
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow RO-Crate",
+      "version": "1.0"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.5",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Process Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.1",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Process Run Crate",
+      "version": "0.1"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.5",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "http://edamontology.org/format_3752",
+      "@type": "DefinedTerm",
+      "name": "CSV"
+    },
+    {
+      "@id": "http://edamontology.org/format_2331",
+      "@type": "DefinedTerm",
+      "name": "HTML"
+    },
+    {
+      "@id": "http://edamontology.org/format_3464",
+      "@type": "DefinedTerm",
+      "name": "JSON"
+    },
+    {
+      "@id": "http://edamontology.org/format_3620",
+      "@type": "DefinedTerm",
+      "name": "xlsx"
+    },
+    {
+      "@id": "http://edamontology.org/format_1964",
+      "@type": "DefinedTerm",
+      "name": "plain text format (unformatted)"
+    },
+    {
+      "@id": "https://www.nationalarchives.gov.uk/PRONOM/x-fmt/263",
+      "@type": "DefinedTerm",
+      "name": "ZIP Format"
+    },
+    {
+      "@id": "https://glottolog.org/resource/languoid/id/stan1293",
+      "name": "English",
+      "alternateName": [
+        "eng",
+        "en"
+      ],
+      "@type": "Language"
+    }
+  ]
+}

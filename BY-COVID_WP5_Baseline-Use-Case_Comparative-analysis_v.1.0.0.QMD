@@ -1,0 +1,577 @@
+---
+title: "BY-COVID WP5.2 Baseline Use Case: SARS-CoV-2 vaccine effectiveness"
+subtitle: "Comparative analysis"
+format: 
+  html:
+    self-contained: true
+code-fold: false
+echo: false
+editor: visual
+always_allow_html: yes
+title-block-banner: "#27445C"
+---
+
+```{r, metadata, results='hide', message=FALSE, warning=FALSE, error=FALSE}
+
+################
+### Metadata ###
+################
+
+# DATE LAST MODIFIED:
+# 22/05/2024
+
+# METADATA: 
+if(FALSE) {
+  title      <- 'BY-COVID WP5.2 Baseline Use Case: SARS-CoV-2 vaccine effectiveness - comparative analysis'
+  author     <- list('Marjan Meurisse')
+  version    <- '1.0.0'
+  maintainer <- 'Marjan Meurisse'
+  email      <- 'Marjan.Meurisse@sciensano.be'
+  input      <- 'results-survival-analysis-XXX.xlsx (local results analytical pipeline)'
+  output     <- 'BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.0 (interactive report)'
+}
+
+```
+
+```{r, load required packages, results='hide', message=FALSE, warning=FALSE, error=FALSE}
+
+library(readxl)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(raster)
+library(meta)
+library(formattable)
+library(metaSurvival)
+library(viridis) 
+library(htmlwidgets)
+
+```
+
+```{r, read data, results='hide', message=FALSE, warning=FALSE, error=FALSE}
+
+files_xlsx <- list.files("./local_outputs", pattern=".xlsx", recursive=TRUE, full.names=TRUE)
+# files_xlsx <- grep(".xlsx", list.files(path="./input/", full.names = TRUE, recursive = TRUE), value = TRUE)
+
+surv_summary_df = data.frame(matrix(nrow = 0, ncol = 11))
+hr_df = data.frame(matrix(nrow = 0, ncol = 9)) 
+rmst_df = data.frame(matrix(nrow = 0, ncol = 7))
+ate_df = data.frame(matrix(nrow = 0, ncol = 5))
+
+surv_summary_vacschedule_df = data.frame(matrix(nrow = 0, ncol = 11))
+hr_vacschedule_df = data.frame(matrix(nrow = 0, ncol = 9)) 
+rmst_vacschedule_df = data.frame(matrix(nrow = 0, ncol = 7))
+ate_vacschedule_df = data.frame(matrix(nrow = 0, ncol = 5))
+
+surv_summary_area_df = data.frame(matrix(nrow = 0, ncol = 11))
+hr_area_df = data.frame(matrix(nrow = 0, ncol = 9)) 
+rmst_area_df = data.frame(matrix(nrow = 0, ncol = 7))
+ate_area_df = data.frame(matrix(nrow = 0, ncol = 6))
+
+for (i in 1:length(files_xlsx)) {
+  #### Overall
+  ## Read survival probability data 
+  data_surv_summ <- read_excel(files_xlsx[i], sheet = "Surv_summary")
+  data_surv_summ$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  surv_summary_df <- rbind(surv_summary_df, data_surv_summ)
+  ## Read HR data
+  data_hr <- read_excel(files_xlsx[i], sheet = "HR", range = cell_cols("A:I"))
+  colnames(data_hr)[1] <- 'coefficients'
+  data_hr$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  hr_df <- rbind(hr_df, data_hr)
+  ## Read RMST data
+  data_rmst <- read_excel(files_xlsx[i], sheet = "RMST_RMTL")
+  data_rmst$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  rmst_df <- rbind(rmst_df, data_rmst)
+  ## Read RMSTD data
+  data_rmstd <- read_excel(files_xlsx[i], sheet = "ATE")
+  data_rmstd$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  ate_df <- rbind(ate_df, data_rmstd)
+  
+  #### By vaccination schedule
+  ## Read survival probability data 
+  data_surv_summ_vacschedule <- read_excel(files_xlsx[i], sheet = "Surv_summary_vacschedule")
+  data_surv_summ_vacschedule$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  surv_summary_vacschedule_df <- rbind(surv_summary_vacschedule_df, data_surv_summ_vacschedule)
+  ## Read RMST data
+  data_rmst_vacschedule <- read_excel(files_xlsx[i], sheet = "RMST_RMTL_vacschedule")
+  data_rmst_vacschedule$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  rmst_vacschedule_df <- rbind(rmst_vacschedule_df, data_rmst_vacschedule)
+  ## Read RMSTD data
+  data_rmstd_vacschedule <- read_excel(files_xlsx[i], sheet = "ATE_vacschedule")
+  data_rmstd_vacschedule$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  ate_vacschedule_df <- rbind(ate_vacschedule_df, data_rmstd_vacschedule)
+  
+  #### By residence area
+  ## Read survival probability data 
+  data_surv_summ_area <- read_excel(files_xlsx[i], sheet = "Surv_summary_area")
+  data_surv_summ_area$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  surv_summary_area_df <- rbind(surv_summary_area_df, data_surv_summ_area)
+  ## Read RMST data
+  data_rmst_area <- read_excel(files_xlsx[i], sheet = "RMST_RMTL_area")
+  data_rmst_area$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  rmst_area_df <- rbind(rmst_area_df, data_rmst_area)
+  ## Read RMSTD data
+  data_rmstd_area <- read_excel(files_xlsx[i], sheet = "ATE_area")
+  data_rmstd_area$country <- str_match(files_xlsx[i], "results-survival-analysis-\\s*(.*?)\\s*.xlsx")[,2]
+  ate_area_df <- rbind(ate_area_df, data_rmstd_area)
+  
+}
+
+rm(data_surv_summ,data_hr,data_rmst,data_rmstd,
+   data_surv_summ_vacschedule,data_hr_vacschedule,data_rmst_vacschedule,data_rmstd_vacschedule,
+   data_surv_summ_area,data_hr_area,data_rmst_area,data_rmstd_area)
+
+```
+
+## Survival
+
+::: panel-tabset
+##### Survival plot
+
+```{r, survival plot, message=FALSE, warning=FALSE, error=FALSE}
+
+v_countries <- unique(surv_summary_df$country)
+
+surv_summary_df <- surv_summary_df %>% rename("Time"=time)
+surv_summary_df$country_2 <- factor(surv_summary_df$country, levels=v_countries, labels=v_countries)
+surv_summary_df$strata <- factor(surv_summary_df$strata, levels=c("fully_vaccinated_bl=TRUE","fully_vaccinated_bl=FALSE"), labels=c("Non-exposure group","Control group"))
+
+pl_surv_summary <- surv_summary_df %>% 
+  ggplot(aes(x = Time, y=surv, linetype=strata, 
+             text=paste0("Survival probability: ", round(surv,2), "<br>",
+                         "Participant Node: ", country_2, "<br>", 
+                         "Group: ", strata, "<br>")
+             )) + 
+    geom_line() +
+    geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.1) +
+    scale_color_discrete("Participant Node") + 
+    scale_linetype_discrete("Group") +
+    scale_x_continuous(breaks=c(0,182,365,547), limits = c(0,600)) +
+    ylim(0,1) +
+    ylab("Survival probability") +
+    xlab("Time (days)") +
+    labs(color = "Participant Node") + 
+    theme_classic() +
+    theme(legend.position = "top", legend.direction = "horizontal") +
+    geom_vline(aes(xintercept=365), linetype="dashed") +
+    facet_grid(cols = vars(country_2)) 
+
+ply_surv_summary <- plotly::ggplotly(pl_surv_summary, tooltip=c("x","text")) %>% layout(legend = list(orientation = "h"))
+
+# Get the names of the legend entries
+df <- data.frame(id = seq_along(ply_surv_summary$x$data), legend_entries = unlist(lapply(ply_surv_summary$x$data, `[[`, "name")))
+# Extract the group identifier
+df$legend_group <- gsub("^\\((.*?),\\d+\\)", "\\1", df$legend_entries)
+# Add an indicator for the first entry per group
+df$is_first <- !duplicated(df$legend_group)
+
+for (i in df$id) {
+  # Is the layer the first entry of the group?
+  is_first <- df$is_first[[i]]
+  # Assign the group identifier to the name and legendgroup arguments
+  ply_surv_summary$x$data[[i]]$name <- df$legend_group[[i]]
+  ply_surv_summary$x$data[[i]]$legendgroup <- ply_surv_summary$x$data[[i]]$name
+  # Show the legend only for the first layer of the group 
+  if (!is_first) ply_surv_summary$x$data[[i]]$showlegend <- FALSE
+}
+ply_surv_summary
+
+```
+
+##### Survival probability table
+
+```{r, survival probability table, message=FALSE, warning=FALSE, error=FALSE}
+
+surv_summary_df_pr <- surv_summary_df %>% 
+  filter(Time %in% c(0,182,365,547)) %>% 
+  mutate(surv.ci= paste0(format(round(surv,3),nsmall = 2), " (",format(round(lower,3),nsmall = 2), " - ",format(round(upper,3),nsmall = 2),")")) %>%
+  dplyr::select(c(Time, strata, country, surv.ci)) %>%
+  mutate(country=paste0("Survival probability (95% CI), ",country))
+surv_summary_df_pr_wide <- spread(surv_summary_df_pr, country, surv.ci)
+surv_summary_df_pr_wide <- surv_summary_df_pr_wide %>% 
+  arrange(strata) %>%
+  rename(Stratum=strata)
+
+formattable(surv_summary_df_pr_wide,
+            align = c("l","l",rep("c",length(unique(surv_summary_df$country)))),
+            list(
+                  Stratum = formatter("Stratum",
+                    style = ~style(
+                      display = "block", 
+                      padding = "0 4px", 
+                      `border-radius` = "4px", 
+                      `background-color` = 
+                          case_when(Stratum == "fully_vaccinated_bl=FALSE" ~ "#66CDAA",
+                                    Stratum == "fully_vaccinated_bl=TRUE" ~ "lightblue")))))
+
+```
+
+##### Survival plot by vaccination schedule
+
+The plots are limited to the three most administered vaccination schedules in the Participant Nodes.
+
+```{r, survival plot by vaccination schedule, message=FALSE, warning=FALSE, error=FALSE}
+
+# Limit by 3 most occurring schedules
+surv_summary_vacschedule_df <- surv_summary_vacschedule_df %>% rename("Time"=time)
+
+surv_summary_vacschedule_df <- surv_summary_vacschedule_df %>%
+  mutate(vaccination_schedule_cd=ifelse(vaccination_schedule_cd=="JJ-","JJ",vaccination_schedule_cd))
+n_vacsch <- data.frame(country=character(0),vaccination_schedule_cd=character(0),nr=numeric(0))
+for(i in unique(surv_summary_vacschedule_df$country)) {
+  for(j in unique(surv_summary_vacschedule_df$vaccination_schedule_cd)) {
+    n_vacsch <- rbind(n_vacsch, c(i,j,max(surv_summary_vacschedule_df %>% filter(country==i & vaccination_schedule_cd==j) %>% dplyr::select(n.risk))))
+  }
+}
+colnames(n_vacsch) <- c("country","vaccination_schedule_cd","nr")
+n_vacsch$nr <- as.numeric(n_vacsch$nr)
+n_vacsch <- n_vacsch %>% 
+  group_by(country) %>% 
+  dplyr::arrange(country,desc(nr)) %>% 
+  filter(row_number() %in% 1:3) %>%
+  ungroup()
+
+surv_summary_vacschedule_df_sub <- surv_summary_vacschedule_df[0,]
+for(i in unique(surv_summary_vacschedule_df$country)) {
+  tmp <- surv_summary_vacschedule_df %>% 
+    filter((country==i & 
+              (vaccination_schedule_cd %in% 
+                 as.vector(n_vacsch %>% filter(country==i) %>% dplyr::select(vaccination_schedule_cd))[[1]])))
+  surv_summary_vacschedule_df_sub <- rbind(surv_summary_vacschedule_df_sub,tmp)
+}
+
+surv_summary_vacschedule_df_sub$country_2 <- factor(surv_summary_vacschedule_df_sub$country, levels=v_countries, labels=v_countries)
+surv_summary_vacschedule_df_sub$fully_vaccinated_bl <- factor(surv_summary_vacschedule_df_sub$fully_vaccinated_bl, levels=c("TRUE","FALSE"), labels=c("Intervention group","Control group"))
+
+pl_surv_summary_vacschedule <- surv_summary_vacschedule_df_sub %>%
+  ggplot(aes(x = Time, y=surv, color=vaccination_schedule_cd, linetype=fully_vaccinated_bl,
+             text=paste0("Survival probability: ", round(surv,2), "<br>",
+                         "Participant Node: ", country_2, "<br>", 
+                         "Group: ", fully_vaccinated_bl, "<br>",
+                         "Vaccination schedule: ", vaccination_schedule_cd, "<br>")
+             )) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.1) +
+  theme_classic() +
+  ylim(0,1) +
+  ylab("Survival probability") +
+  xlab("Time (days)") +
+  scale_x_continuous(breaks=c(0,182,365,547), limits = c(0,600)) +
+  scale_linetype_discrete("Group") +
+  scale_color_discrete("Vaccination schedule") + 
+  geom_vline(aes(xintercept=365), linetype="dashed") +
+  facet_grid(cols=vars(country)) 
+
+pl_surv_summary_vacschedule.ply <- ggplotly(pl_surv_summary_vacschedule, tooltip=c("x","text"))
+pl_surv_summary_vacschedule.ply %>% layout(length=1500, height=500, legend = list(valign = "top",orientation = "h"))
+
+```
+
+##### Survival plot by residence area
+
+```{r, survival plot by residence area, message=FALSE, warning=FALSE, error=FALSE}
+
+surv_summary_area_df$country_2 <- factor(surv_summary_area_df$country, levels=v_countries, labels=v_countries)
+surv_summary_area_df$fully_vaccinated_bl <- factor(surv_summary_area_df$fully_vaccinated_bl, levels=c("TRUE","FALSE"), labels=c("Intervention group","Control group"))
+
+pl_surv_summary_area <- surv_summary_area_df %>%
+  ggplot(aes(x = time, y=surv, color=residence_area_cd, linetype=fully_vaccinated_bl,
+             text=paste0("Survival probability: ", round(surv,2), "<br>",
+                         "Participant Node: ", country_2, "<br>", 
+                         "Group: ", fully_vaccinated_bl, "<br>",
+                         "Residence area (NUTS 3): ", residence_area_cd, "<br>")
+             )) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.1) +
+  theme_classic() +
+  ylim(0,1) +
+  ylab("Survival probability") +
+  xlab("Time (days)") +
+  scale_linetype_discrete("Group") +
+  scale_color_discrete("Residence area (NUTS 3)") + 
+  scale_x_continuous(breaks=c(0,182,365,547), limits = c(0,600)) +
+  geom_vline(aes(xintercept=365), linetype="dashed") +
+  facet_grid(cols=vars(country_2)) 
+
+pl_surv_summary_area.ply <- ggplotly(pl_surv_summary_area, tooltip=c("x","text"))
+pl_surv_summary_area.ply %>% layout(length=1500, height=800, legend = list(valign = "top",orientation = "h"))
+
+```
+:::
+
+## Cumulative incidence
+
+::: panel-tabset
+##### Cumulative incidence plot
+
+```{r, cumulative incidence plot, message=FALSE, warning=FALSE, error=FALSE}
+
+surv_summary_df$cuminc <- 1-surv_summary_df$surv
+surv_summary_df$cuminc_upper <- 1-surv_summary_df$lower
+surv_summary_df$cuminc_lower <- 1-surv_summary_df$upper
+
+pl_cuminc_summary <- surv_summary_df %>% 
+  ggplot(aes(x = Time, y=cuminc, linetype=strata, 
+             text=paste0("Cumulative incidence (%): ", round(cuminc,2), "<br>",
+                         "Participant Node: ", country_2, "<br>", 
+                         "Group: ", strata, "<br>")
+             )) + 
+    geom_line() +
+    geom_ribbon(aes(ymin = cuminc_lower, ymax = cuminc_upper), alpha = 0.1) +
+    scale_color_discrete("Participant Node") + 
+    scale_linetype_discrete("Group") +
+    ylim(0,1) +
+    ylab("Cumulative incidence (%)") +
+    xlab("Time (days)") +
+    labs(color = "Participant Node") + 
+    scale_x_continuous(breaks=c(0,182,365,547), limits = c(0,600)) +
+    geom_vline(aes(xintercept=365), linetype="dashed") +
+    theme_classic() +
+    theme(legend.position = "top", legend.direction = "horizontal") +
+    facet_grid(cols=vars(country_2)) 
+
+ply_cuminc_summary <- plotly::ggplotly(pl_cuminc_summary, tooltip=c("x","text")) %>% layout(legend = list(orientation = "h"))
+
+# Get the names of the legend entries
+df <- data.frame(id = seq_along(ply_cuminc_summary$x$data), legend_entries = unlist(lapply(ply_cuminc_summary$x$data, `[[`, "name")))
+# Extract the group identifier
+df$legend_group <- gsub("^\\((.*?),\\d+\\)", "\\1", df$legend_entries)
+# Add an indicator for the first entry per group
+df$is_first <- !duplicated(df$legend_group)
+
+for (i in df$id) {
+  # Is the layer the first entry of the group?
+  is_first <- df$is_first[[i]]
+  # Assign the group identifier to the name and legendgroup arguments
+  ply_cuminc_summary$x$data[[i]]$name <- df$legend_group[[i]]
+  ply_cuminc_summary$x$data[[i]]$legendgroup <- ply_cuminc_summary$x$data[[i]]$name
+  # Show the legend only for the first layer of the group 
+  if (!is_first) ply_cuminc_summary$x$data[[i]]$showlegend <- FALSE
+}
+ply_cuminc_summary
+
+```
+
+##### Cumulative incidence table
+
+```{r, cumulative incidence table, message=FALSE, warning=FALSE, error=FALSE}
+
+surv_summary_df_pr <- surv_summary_df %>% 
+  filter(Time %in% c(0,182,365,547)) %>% 
+  dplyr::select(c(Time, strata, country, cuminc)) %>%
+  mutate(country=paste0("Cumulative incidence, ",country), cuminc=format(round(cuminc,3),nsmall = 2))
+surv_summary_df_pr_wide <- spread(surv_summary_df_pr, country, cuminc)
+surv_summary_df_pr_wide <- surv_summary_df_pr_wide %>% 
+  arrange(strata) %>%
+  rename(Stratum=strata)
+
+formattable(surv_summary_df_pr_wide,
+            align = c("l","l",rep("c",length(unique(surv_summary_df$country)))),
+            list(
+                  Stratum = formatter("Stratum",
+                    style = ~style(
+                      display = "block", 
+                      padding = "0 4px", 
+                      `border-radius` = "4px", 
+                      `background-color` = 
+                          case_when(Stratum == "fully_vaccinated_bl=FALSE" ~ "#66CDAA",
+                                    Stratum == "fully_vaccinated_bl=TRUE" ~ "lightblue")))))
+
+```
+:::
+
+## Hazard ratio
+
+Effect estimate by Participant Node:
+
+```{r, table HR, message=FALSE, warning=FALSE, error=FALSE}
+
+hr_df$coefficients_ci <- paste0(round(hr_df$coefficients,3)," (", round(hr_df$coefficients - 1.96*hr_df$se_coefficients,3), ", ", round(hr_df$coefficients + 1.96*hr_df$se_coefficients,3), ")")
+
+hr_df$hr_ci <- paste0(round(hr_df$exp_coefficients,3)," (", round(hr_df$exp_coefficients_lower,3), ", ", round(hr_df$exp_coefficients_upper,3), ")")
+
+formattable(hr_df %>% dplyr::select(c(country, coefficients_ci, hr_ci, p_value)) %>% rename(`logHR (95% CI)`=coefficients_ci, `Participant Node`=country, `HR (95% CI)`= hr_ci, `P-value`=p_value), align = c('l','c','c','c','c'))
+
+```
+
+Forest plot:
+
+```{r, forest plot HR, message=FALSE, warning=FALSE, error=FALSE}
+
+## Range plot
+p_hr_bynode <-  hr_df %>%
+  ggplot(aes(y = country,
+             text=paste0("Participant Node: ", country, "<br>",
+                         "Hazard Ratio (95% CI): ", hr_ci, "<br>",
+                         "log(Hazard Ratio) (95% CI): ", coefficients_ci, "<br>",
+                         "P-value: ", p_value, "<br>")
+             )
+         ) + 
+  theme_minimal() +
+  geom_point(aes(x=exp_coefficients), shape=15, size=3) +
+  geom_linerange(aes(xmin=exp_coefficients_lower, xmax=exp_coefficients_upper)) +
+  geom_vline(xintercept = 1, linetype="dashed") +
+  labs(x="Hazard Ratio", y="") +
+  scale_x_continuous(breaks=seq(min(hr_df$exp_coefficients,0),max(hr_df$exp_coefficients,1.2),by=0.2), 
+                     limits = c(min(hr_df$exp_coefficients,0),max(hr_df$exp_coefficients,1.2))) 
+  
+ggplotly(p_hr_bynode, tooltip=c("text")) 
+
+```
+
+## Restricted Mean Survival Time (RMST) Difference
+
+Effect estimate by Participant Node:
+
+```{r, table RMSTD, message=FALSE, warning=FALSE, error=FALSE}
+
+rmst_table <- data.frame(Country=character(0),`RMST control`=character(0),`RMST intervention`=character(0),RMSTD=character(0),p_value=numeric(0))
+for(i in unique(rmst_df$country)) {
+  rmst_control_tmp_dt <- rmst_df %>% filter(Measure=="RMST" & country==i & Arm=="fully_vaccinated_bl==FALSE")
+  rmst_control_tmp <- paste0(
+    format(round(as.numeric(rmst_control_tmp_dt$Estimate),3),nsmall=3), " (",
+    format(round(as.numeric(rmst_control_tmp_dt$CI.lower),3),nsmall=3), ", ",
+    format(round(as.numeric(rmst_control_tmp_dt$CI.upper),3),nsmall=3), ")"
+  )
+  rmst_intervention_tmp_dt <- rmst_df %>% filter(Measure=="RMST" & country==i & Arm=="fully_vaccinated_bl==TRUE")
+  rmst_intervention_tmp <- paste0(
+    format(round(as.numeric(rmst_intervention_tmp_dt$Estimate),3),nsmall=3), " (",
+    format(round(as.numeric(rmst_intervention_tmp_dt$CI.lower),3),nsmall=3), ", ",
+    format(round(as.numeric(rmst_intervention_tmp_dt$CI.upper),3),nsmall=3), ")"
+  )
+  ate_tmp_df <- ate_df %>% filter(Measure == "RMST (fully_vaccinated_bl==TRUE)-(fully_vaccinated_bl==FALSE)" & country==i)
+  ate_tmp <- paste0(
+    format(round(as.numeric(ate_tmp_df$Estimate),3),nsmall=3), " (",
+    format(round(as.numeric(ate_tmp_df$CI.lower),3),nsmall=3), ", ",
+    format(round(as.numeric(ate_tmp_df$CI.upper),3),nsmall=3), ")"
+  )
+  p_tmp <- format(round(as.numeric(ate_tmp_df$p_value),3),nsmall=3)
+  rmst_table <- rbind(rmst_table,c(i,rmst_control_tmp,rmst_intervention_tmp,ate_tmp,p_tmp))
+}
+colnames(rmst_table) <- c("Country","RMST control","RMST intervention","RMSTD","P-value")
+
+formattable(rmst_table,
+            align=c('l','c','c','c','c'))
+
+```
+
+Forest plot:
+
+```{r, forest plot RMST, message=FALSE, warning=FALSE, error=FALSE}
+
+rmst_df$Arm <- factor(rmst_df$Arm, levels=c("fully_vaccinated_bl==TRUE","fully_vaccinated_bl==FALSE"), labels=c("Intervention group","Control group"))
+rmst_df$country_2 <- factor(rmst_df$country, levels=v_countries, labels=v_countries)
+
+## Range plot
+rmst_df$rmst_ci <- paste0(format(round(as.numeric(rmst_df$Estimate),3),nsmall=3)," (", format(round(as.numeric(rmst_df$CI.lower),3),nsmall=3), ", ", format(round(as.numeric(rmst_df$CI.upper),3),nsmall=3), ")")
+rmst_df_sub <- rmst_df %>% filter(Measure=="RMST")
+rmst_df_sub$Estimate <- as.numeric(rmst_df_sub$Estimate)
+rmst_df_sub$CI.lower <- as.numeric(rmst_df_sub$CI.lower)
+rmst_df_sub$CI.upper <- as.numeric(rmst_df_sub$CI.upper)
+a <- 0:round(max(as.numeric(rmst_df_sub$CI.upper)))
+brks <- a[seq(1, length(a), 50)]
+p_rmst_bynode <-  rmst_df_sub %>%
+  ggplot(aes(x=Estimate, y = country_2, color = Arm,
+             text=paste0("Participant Node: ", country_2, "<br>",
+                         "Group: ", Arm, "<br>",
+                         "RMST (95% CI): ", rmst_ci, "<br>")
+             )
+         ) + 
+  scale_x_continuous(breaks=brks) +
+  geom_point(shape=15, size=3) +
+  geom_linerange(aes(xmin=CI.lower, xmax=CI.upper, color=Arm)) +
+  geom_vline(xintercept = 0, linetype="dashed") +
+  labs(x="RMST", y="")  +
+  theme_minimal() +
+  scale_color_discrete("Group") + 
+  coord_cartesian(xlim=c(0, max(as.numeric(rmst_df$CI.upper))+10)) 
+ggplotly(p_rmst_bynode, tooltip=c("text")) %>% layout(legend = list(valign = "top",orientation = "h"))
+
+```
+
+## RMST Difference by schedule
+
+Effect estimate by schedule, by Participant Node. The plots are limited by the three most administered vaccination schedules in the Participant Nodes.
+
+```{r, table RMSTD by schedule, message=FALSE, warning=FALSE, error=FALSE}
+
+rmst_vacschedule_df_sub <- rmst_vacschedule_df[0,]
+for(i in unique(rmst_vacschedule_df$country)) {
+  tmp <- rmst_vacschedule_df %>% 
+    filter((country==i & 
+              (Vaccination_schedule %in% 
+                 as.vector(n_vacsch %>% filter(country==i) %>% dplyr::select(vaccination_schedule_cd))[[1]])))
+  rmst_vacschedule_df_sub <- rbind(rmst_vacschedule_df_sub,tmp)
+}
+rmst_vacschedule_df_sub <- rmst_vacschedule_df_sub %>% filter(Measure=="RMST")
+
+rmst_vacsch_table <- data.frame(Country=character(0),`Vaccination schedule`=character(0), `RMST control`=character(0),`RMST intervention`=character(0),RMSTD=character(0),p_value=numeric(0))
+for(i in unique(rmst_vacschedule_df_sub$country)) {
+  rmst_vacschedule_df_sub.tmp <- rmst_vacschedule_df_sub %>% filter(country==i)
+  for(j in unique(rmst_vacschedule_df_sub.tmp$Vaccination_schedule)) {
+    rmst_vacsch_control_tmp_dt <- rmst_vacschedule_df_sub.tmp %>% filter(Vaccination_schedule==j & Arm=="fully_vaccinated_bl==FALSE")
+    rmst_vacsch_control_tmp <- paste0(
+      format(round(as.numeric(rmst_vacsch_control_tmp_dt$Estimate),3),nsmall=3), " (",
+      format(round(as.numeric(rmst_vacsch_control_tmp_dt$CI.lower),3),nsmall=3), ", ",
+      format(round(as.numeric(rmst_vacsch_control_tmp_dt$CI.upper),3),nsmall=3), ")"
+    )
+    rmst_vacsch_intervention_tmp_dt <- rmst_vacschedule_df_sub.tmp %>% filter(Vaccination_schedule==j & Arm=="fully_vaccinated_bl==TRUE")
+    rmst_vacsch_intervention_tmp <- paste0(
+      format(round(as.numeric(rmst_vacsch_intervention_tmp_dt$Estimate),3),nsmall=3), " (",
+      format(round(as.numeric(rmst_vacsch_intervention_tmp_dt$CI.lower),3),nsmall=3), ", ",
+      format(round(as.numeric(rmst_vacsch_intervention_tmp_dt$CI.upper),3),nsmall=3), ")"
+    )
+    ate_vacsch_tmp_df <- ate_vacschedule_df %>% filter(Measure == "RMST (fully_vaccinated_bl==TRUE)-(fully_vaccinated_bl==FALSE)" & country==i & Vaccination_schedule==j)
+    ate_vacsch_tmp <- paste0(
+      format(round(as.numeric(ate_vacsch_tmp_df$Estimate),3),nsmall=3), " (",
+      format(round(as.numeric(ate_vacsch_tmp_df$CI.lower),3),nsmall=3), ", ",
+      format(round(as.numeric(ate_vacsch_tmp_df$CI.upper),3),nsmall=3), ")"
+    )
+    p_vacsch_tmp <- format(round(as.numeric(ate_vacsch_tmp_df$p_value),3),nsmall=3)
+    rmst_vacsch_table <- rbind(rmst_vacsch_table,c(i,j,rmst_vacsch_control_tmp,rmst_vacsch_intervention_tmp,ate_vacsch_tmp,p_vacsch_tmp))
+  }
+}
+colnames(rmst_vacsch_table) <- c("Country","Vaccination schedule","RMST control","RMST intervention","RMSTD","P-value")
+
+formattable(rmst_vacsch_table,
+            align=c('l','l','c','c','c','c'))
+
+
+```
+
+Forest plot:
+
+```{r, forest plot RMST by schedule, message=FALSE, warning=FALSE, error=FALSE}
+
+rmst_vacschedule_df_sub$Arm <- factor(rmst_vacschedule_df_sub$Arm, levels=c("fully_vaccinated_bl==TRUE","fully_vaccinated_bl==FALSE"), labels=c("Intervention group","Control group"))
+rmst_vacschedule_df_sub$country_2 <- factor(rmst_vacschedule_df_sub$country, levels=v_countries, labels=v_countries)
+
+## Range plot
+rmst_vacschedule_df_sub$rmst_ci <- paste0(format(round(as.numeric(rmst_vacschedule_df_sub$Estimate),3),nsmall=3)," (", format(round(as.numeric(rmst_vacschedule_df_sub$CI.lower),3),nsmall=3), ", ", format(round(as.numeric(rmst_vacschedule_df_sub$CI.upper),3),nsmall=3), ")")
+rmst_vacschedule_df_sub$Estimate <- as.numeric(rmst_vacschedule_df_sub$Estimate)
+rmst_vacschedule_df_sub$CI.lower <- as.numeric(rmst_vacschedule_df_sub$CI.lower)
+rmst_vacschedule_df_sub$CI.upper <- as.numeric(rmst_vacschedule_df_sub$CI.upper)
+a <- 0:round(max(as.numeric(rmst_vacschedule_df_sub$CI.upper)))
+brks <- a[seq(1, length(a), 50)]
+p_rmst_vacsch_bynode <-  rmst_vacschedule_df_sub %>%
+  ggplot(aes(x=Estimate, y = Vaccination_schedule , color = Arm,
+             text=paste0("Participant Node: ", country, "<br>",
+                         "Vaccination schedule: ", Vaccination_schedule, "<br>",
+                         "Group: ", Arm, "<br>",
+                         "RMST (95% CI): ", rmst_ci, "<br>")
+             )
+         ) + 
+  scale_x_continuous(breaks=brks) +
+  geom_point(shape=15, size=3) +
+  geom_linerange(aes(xmin=CI.lower, xmax=CI.upper, color=Arm)) +
+  geom_vline(xintercept = 0, linetype="dashed") +
+  labs(x="RMST", y="")  +
+  theme_minimal() +
+  coord_cartesian(xlim=c(0, max(as.numeric(rmst_df$CI.upper))+10)) +
+  facet_grid(vars(country)) +
+  scale_color_discrete("Group") + 
+  theme(legend.position = "top", legend.direction = "horizontal")
+ggplotly(p_rmst_vacsch_bynode, tooltip=c("text")) %>% layout(legend = list(valign = "top",orientation = "h"))
+
+```

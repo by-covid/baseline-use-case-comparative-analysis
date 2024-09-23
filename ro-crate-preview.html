@@ -1,0 +1,2620 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/terms/workflow-run/context",
+    {
+      "buildInstructions": "https://codemeta.github.io/terms/buildInstructions"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "identifier": "ro-crate-metadata.json",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ],
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0035-6475"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-9842-9718"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis",
+      "description": "This publication corresponds to the <strong>local outputs</strong> and <strong>comparative analysis</strong>&nbsp;of the Baseline Use Case proposed in T.5.2 (WP5) in the&nbsp;<a href=\"https://by-covid.org/\">BY-COVID project</a>&nbsp;on&nbsp;&ldquo;<em>SARS-CoV-2&nbsp;Vaccine&nbsp;effectiveness in preventing SARS-CoV-2 infection.</em>&rdquo;</p>\n<p><strong>Research question</strong>: \"<em>How effective have the SARS-CoV-2 vaccination programmes been in preventing SARS-CoV-2 infections?</em>&rdquo;</p>\n<p><strong>Study design</strong>: An observational retrospective longitudinal (cohort) study using routinely collected population, health and care data from several countries/regions in Europe. We have designed the observational study to emulate a hypothetical Target Trial (TT) of the causal effect of SARS-CoV-2 vaccination programs in preventing SARS-CoV-2 infections.</p>\n<p>A <strong>federated analysis</strong> approach was adopted, with the secured distributed deployment of the interoperable analytical pipeline by different Participant Nodes (i.e., institutions hosting or having access to the required individual-level data). A detailed description of the data processing procedures and the security measures within the Secured Processing Environments (SPE) of each of the Participant Nodes is provided in the published <a href=\"../doi/10.5281/zenodo.7625783\">Data Management Plan (DMP)</a>. For more details on the methodological approach, see <a href=\"https://doi.org/10.1186/s12874-023-02068-3\">here</a>.&nbsp;</p>\n<p>The&nbsp;<strong>local outputs</strong> correspond with the <em>interactive reports</em> of each main step of the analytical pipeline described in '<a href=\"https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/blob/main/vaccine_effectiveness_analytical_pipeline/documentation/BY-COVID-WP5-BaselineUseCase-VE-documentation-analytical-pipeline.pdf\">Methods analytical pipeline</a>' and an <em>Excel file</em> used as input for the comparative analysis. They have been produced using real-world data from public health and the national health system in Aragon (Spain), Brussels and Wallonia (Belgium), and Finland.&nbsp;</p>\n<p>The <strong>scripts </strong>implementing the statistical analyses in the analytical pipeline are available on&nbsp;<a href=\"https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case\">GitHub</a>, with additional documentation supporting the development and implementation of the baseline use case.&nbsp;</p>\n<p><strong>Files </strong>included in this publication:&nbsp;</p>\n<ul>\n<li><strong><em>Local outputs produced by each Participant Node: </em></strong><em>6 interactive HTML reports (Human-readable, interactive report) + 1 XLSX file (Human-readable, Excel)</em>\n<ul>\n<li>Aragon v.1.0.0</li>\n<li>Brussels-Wallonia v.1.0.0</li>\n<li>Finland v.1.0.0&nbsp;</li>\n</ul>\n</li>\n<li><strong><em>Comparative analysis</em></strong>:&nbsp;\n<ul>\n<li>SARS-CoV-2 vaccine effectiveness comparative analysis results v.1.0.1 (HTML) - Interactive report</li>\n<li>SARS-CoV-2 vaccine effectiveness comparative analysis execution script v.1.0.1 (QMD) - Quarto RMarkdown script to execute the comparative analysis and produce the interactive report</li>\n</ul>\n</li>\n<li><strong><em>Reproducible environment using renv:</em></strong>\n<ul>\n<li>renv/ - Project environment with activation scripts</li>\n<li>renv.lock - Lockfile</li>\n<li>.Rprofile - Project R profile</li>\n</ul>\n</li>\n</ul>",
+      "identifier": "https://doi.org/10.5281/zenodo.11209362",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/process/0.5"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.5"
+        }
+      ],
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-4409-0664"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-6285-8120"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-7316-6990"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4842-1667"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3499-4800"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-8783-5478"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0961-3298"
+        }
+      ],
+      "datePublished": "2024-08-01",
+      "license": {
+        "@id": "https://spdx.org/licenses/CC-BY-4.0"
+      },
+      "publisher": {
+        "@id": "https://zenodo.org"
+      },
+      "inLanguage": {
+        "@id": "https://glottolog.org/resource/languoid/id/stan1293"
+      },
+      "temporalCoverage": "2020-03-01/2022-12-20",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3336899/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        },
+        {
+          "@id": "https://sws.geonames.org/660013/"
+        }
+      ],
+      "keywords": "COVID-19, Comparative effectiveness, International comparison, Causal inference, SARS-CoV-2",
+      "funding": {
+        "@id": "https://doi.org/10.3030/101046203"
+      },
+      "funder": {
+        "@id": "https://ror.org/00k4n6c32"
+      },
+      "hasPart": [
+        {
+          "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+        },
+        {
+          "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD"
+        },
+        {
+          "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html"
+        },
+        {
+          "@id": ".Rprofile"
+        },
+        {
+          "@id": "renv/"
+        },
+        {
+          "@id": "renv.lock"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "mentions": [
+        {
+          "@id": "#run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307"
+        },
+        {
+          "@id": "#run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c"
+        },
+        {
+          "@id": "#run-finland-740ece65-d94b-4247-8622-75d7b06c5512"
+        },
+        {
+          "@id": "#run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/ro/crate/1.1",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "RO-Crate",
+      "version": "1.1"
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow RO-Crate",
+      "version": "1.0"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0035-6475",
+      "@type": "Person",
+      "name": "Eli Chadwick",
+      "givenName": "Eli",
+      "familyName": "Chadwick",
+      "affiliation": {
+        "@id": "https://ror.org/027m9bs27"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9842-9718",
+      "@type": "Person",
+      "name": "Stian Soiland-Reyes",
+      "givenName": "Stian",
+      "familyName": "Soiland-Reyes",
+      "affiliation": {
+        "@id": "https://ror.org/027m9bs27"
+      }
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.5",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Process Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.5",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4409-0664",
+      "@type": "Person",
+      "name": "Marjan Meurisse",
+      "givenName": "Marjan",
+      "familyName": "Meurisse",
+      "affiliation": {
+        "@id": "https://ror.org/04ejags36"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6285-8120",
+      "@type": "Person",
+      "name": "Francisco Estupiñán-Romero",
+      "givenName": "Francisco",
+      "familyName": "Estupiñán-Romero",
+      "affiliation": {
+        "@id": "https://ror.org/05p0enq35"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7316-6990",
+      "@type": "Person",
+      "name": "Nina Van Goethem",
+      "givenName": "Nina",
+      "familyName": "Van Goethem",
+      "affiliation": {
+        "@id": "https://ror.org/04ejags36"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4842-1667",
+      "@type": "Person",
+      "name": "Markus Perola",
+      "givenName": "Markus",
+      "familyName": "Perola",
+      "affiliation": {
+        "@id": "https://ror.org/03tf0c761"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3499-4800",
+      "@type": "Person",
+      "name": "Teemu Paajanen",
+      "givenName": "Teemu",
+      "familyName": "Paajanen",
+      "affiliation": {
+        "@id": "https://ror.org/03tf0c761"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8783-5478",
+      "@type": "Person",
+      "name": "Javier González-Galindo",
+      "givenName": "Javier",
+      "familyName": "González-Galindo",
+      "affiliation": {
+        "@id": "https://ror.org/05p0enq35"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0961-3298",
+      "@type": "Person",
+      "name": "Enrique Bernal-Delgado",
+      "givenName": "Enrique",
+      "familyName": "Bernal-Delgado",
+      "affiliation": {
+        "@id": "https://ror.org/05p0enq35"
+      }
+    },
+    {
+      "@id": "https://spdx.org/licenses/CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "@type": "CreativeWork",
+      "name": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "@id": "https://zenodo.org",
+      "@type": "Organization",
+      "name": "Zenodo"
+    },
+    {
+      "@id": "https://glottolog.org/resource/languoid/id/stan1293",
+      "name": "English",
+      "alternateName": [
+        "eng",
+        "en"
+      ],
+      "@type": "Language"
+    },
+    {
+      "@id": "https://sws.geonames.org/2800867/",
+      "@type": "AdministrativeArea",
+      "name": "Brussels-Capital, Belgium"
+    },
+    {
+      "@id": "https://sws.geonames.org/3336899/",
+      "@type": "AdministrativeArea",
+      "name": "Aragon, Spain"
+    },
+    {
+      "@id": "https://sws.geonames.org/3337387/",
+      "@type": "AdministrativeArea",
+      "name": "Wallonia, Belgium"
+    },
+    {
+      "@id": "https://sws.geonames.org/660013/",
+      "@type": "Country",
+      "name": "Finland"
+    },
+    {
+      "@id": "https://doi.org/10.3030/101046203",
+      "@type": "Grant",
+      "name": "BY-COVID - Beyond COVID (101046203)",
+      "funder": {
+        "@id": "https://ror.org/00k4n6c32"
+      }
+    },
+    {
+      "@id": "https://ror.org/00k4n6c32",
+      "@type": "Organization",
+      "name": "European Commission"
+    },
+    {
+      "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4",
+      "@type": [
+        "Dataset",
+        "ComputationalWorkflow"
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/process"
+        }
+      ],
+      "name": "BY-COVID WP5 T5.2 Baseline Use Case",
+      "description": "This workflow is a separate RO-Crate available through WorkflowHub.",
+      "url": "https://workflowhub.eu/workflows/502/",
+      "distribution": {
+        "@id": "https://workflowhub.eu/workflows/502/ro_crate?version=4"
+      },
+      "version": "4",
+      "input": {
+        "@id": "#vaccine-effectiveness-data"
+      },
+      "output": {
+        "@id": "#vaccine-effectiveness-reports"
+      },
+      "programmingLanguage": {
+        "@id": "https://quarto.org/"
+      }
+    },
+    {
+      "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD",
+      "@type": [
+        "File",
+        "ComputationalWorkflow"
+      ],
+      "version": "1.0.1",
+      "programmingLanguage": {
+        "@id": "https://quarto.org/"
+      },
+      "input": {
+        "@id": "#vaccine-effectiveness-xlsx-reports"
+      },
+      "output": {
+        "@id": "#comparative-analysis-report"
+      }
+    },
+    {
+      "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      },
+      "temporalCoverage": "2020-03-01/2022-12-20",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3336899/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        },
+        {
+          "@id": "https://sws.geonames.org/660013/"
+        }
+      ]
+    },
+    {
+      "@id": ".Rprofile",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "R environment profile",
+      "programmingLanguage": {
+        "@id": "https://cran.r-project.org"
+      },
+      "exampleOfWork": {
+        "@id": "#R-profile"
+      }
+    },
+    {
+      "@id": "renv/",
+      "@type": [
+        "Dataset",
+        "SoftwareSourceCode"
+      ],
+      "name": "R environment with activation scripts"
+    },
+    {
+      "@id": "renv.lock",
+      "@type": "Dataset",
+      "name": "R environment lockfile",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3464"
+      },
+      "exampleOfWork": {
+        "@id": "#R-lockfile"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/",
+      "@type": "Dataset",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/3336899/"
+      },
+      "hasPart": [
+        {
+          "@id": "local_outputs/Aragon_1.0.0/1_DQA.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/2_validation.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/3_imputation.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/4_matching.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/5_descriptive.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/6_survival-analysis.html"
+        },
+        {
+          "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/",
+      "@type": "Dataset",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/1_DQA.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/2_validation.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/3_imputation.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/4_matching.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/5_descriptives.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/6_survival-analysis.html"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/",
+      "@type": "Dataset",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/660013/"
+      },
+      "hasPart": [
+        {
+          "@id": "local_outputs/Finland_1.0.0/1_DQA.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/2_validation.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/3_imputation.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/4_matching.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/5_descriptive.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/6_survival-analysis.html"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx"
+        }
+      ]
+    },
+    {
+      "@id": "#run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307",
+      "@type": "CreateAction",
+      "name": "Run Workflow (Aragon region)",
+      "description": "Run on a Docker container and executed manually, script by script, due to limitations of the secure research environment in which the input data could be accessed.",
+      "instrument": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "containerImage": {
+        "@id": "#container-aragon-f10ce172-e522-49c0-a9df-506932ea42c4"
+      },
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      },
+      "provider": {
+        "@id": "https://ror.org/05p0enq35"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-8783-5478"
+      },
+      "object": {
+        "@id": "#vaccine-effectiveness-aragon-126e7f43-fd41-45f0-b305-91f33b798ada"
+      },
+      "result": {
+        "@id": "local_outputs/Aragon_1.0.0/"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "#run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c",
+      "@type": "CreateAction",
+      "name": "Run Workflow (Brussels and Wallonia regions)",
+      "instrument": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "environment": {
+        "@id": "#environment-brussels-wallonia-0179aa73-5217-40f8-8adc-1919a3ca716c"
+      },
+      "provider": {
+        "@id": "https://ror.org/04ejags36"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4409-0664"
+      },
+      "object": {
+        "@id": "#vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277"
+      },
+      "result": {
+        "@id": "local_outputs/Brussels-Wallonia_1.0.0/"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "#run-finland-740ece65-d94b-4247-8622-75d7b06c5512",
+      "@type": "CreateAction",
+      "name": "Run Workflow (Finland region)",
+      "instrument": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      },
+      "containerImage": {
+        "@id": "#container-finland-3fdab2cf-6b6b-4473-8f79-453fbd32a472"
+      },
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      },
+      "provider": {
+        "@id": "https://ror.org/03tf0c761"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0003-3499-4800"
+      },
+      "startTime": "2024-04-19T05:33:49",
+      "endTime": "2024-04-19T16:47:05",
+      "object": {
+        "@id": "#vaccine-effectiveness-finland-1ade950f-234d-44f8-b2a4-71c5ca8480b3"
+      },
+      "result": {
+        "@id": "local_outputs/Finland_1.0.0/"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "#run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307",
+      "@type": "CreateAction",
+      "name": "Aggregate and compare regional results",
+      "instrument": {
+        "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD"
+      },
+      "buildInstructions": [
+        {
+          "@id": "renv.lock"
+        },
+        {
+          "@id": ".Rprofile"
+        },
+        {
+          "@id": "renv/"
+        }
+      ],
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4409-0664"
+      },
+      "object": [
+        {
+          "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+        },
+        {
+          "@id": "local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx"
+        },
+        {
+          "@id": "local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx"
+        }
+      ],
+      "result": {
+        "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html"
+      },
+      "actionStatus": "CompletedActionStatus"
+    },
+    {
+      "@id": "https://ror.org/04ejags36",
+      "@type": "Organization",
+      "name": "Sciensano"
+    },
+    {
+      "@id": "https://ror.org/05p0enq35",
+      "@type": "Organization",
+      "name": "Instituto Aragonés de Ciencias de la Salud"
+    },
+    {
+      "@id": "https://ror.org/03tf0c761",
+      "@type": "Organization",
+      "name": "Terveyden ja hyvinvoinnin laitos"
+    },
+    {
+      "@id": "https://ror.org/027m9bs27",
+      "@type": "Organization",
+      "name": "University of Manchester"
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/502/ro_crate?version=4",
+      "@type": "DataDownload",
+      "encodingFormat": [
+        "application/zip",
+        {
+          "@id": "https://www.nationalarchives.gov.uk/PRONOM/x-fmt/263"
+        }
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/process"
+        }
+      ]
+    },
+    {
+      "@id": "#vaccine-effectiveness-data",
+      "@type": "FormalParameter",
+      "name": "Vaccine effectiveness data for a region",
+      "valueRequired": true,
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3752"
+      },
+      "workExample": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/input/vaccine_effectiveness_synthetic_pop_10k_v.1.1.1.csv"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-reports",
+      "@type": "FormalParameter",
+      "name": "Collection of human-readable HTML and XLSX reports",
+      "additionalType": "Dataset",
+      "hasPart": [
+        {
+          "@id": "#vaccine-effectiveness-html-reports"
+        },
+        {
+          "@id": "#vaccine-effectiveness-xlsx-report"
+        }
+      ],
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      },
+      "workExample": {
+        "@id": "local_outputs/Aragon_1.0.0/"
+      }
+    },
+    {
+      "@id": "https://quarto.org/",
+      "@type": "ComputerLanguage",
+      "name": "Quarto Markdown",
+      "description": "Quarto Markdown with executable R code blocks",
+      "url": [
+        "https://quarto.org/docs/authoring/markdown-basics.html",
+        "https://quarto.org/docs/computations/r.html"
+      ]
+    },
+    {
+      "@id": "https://www.nationalarchives.gov.uk/PRONOM/x-fmt/263",
+      "@type": "DefinedTerm",
+      "name": "ZIP Format"
+    },
+    {
+      "@id": "http://edamontology.org/format_3752",
+      "@type": "DefinedTerm",
+      "name": "CSV"
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/input/vaccine_effectiveness_synthetic_pop_10k_v.1.1.1.csv",
+      "@type": "File",
+      "name": "Synthetic dataset with 10k entries (CSV).",
+      "description": "Synthetic dataset with 10k entries (CSV). Not used for the workflow runs but shares a format with the workflow inputs.",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3752"
+      },
+      "exampleOfWork": "#vaccine-effectiveness-data",
+      "isPartOf": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-html-reports",
+      "@type": "FormalParameter",
+      "name": "6 interactive HTML reports (Human-readable, interactive report)",
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-xlsx-report",
+      "@type": "FormalParameter",
+      "name": "1 XLSX report (Human-readable, Excel)",
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      },
+      "workExample": {
+        "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+      }
+    },
+    {
+      "@id": "http://edamontology.org/format_2331",
+      "@type": "DefinedTerm",
+      "name": "HTML"
+    },
+    {
+      "@id": "http://edamontology.org/format_3620",
+      "@type": "DefinedTerm",
+      "name": "xlsx"
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-xlsx-reports",
+      "@type": "FormalParameter",
+      "name": "1 or more XLSX reports on regional vaccine effectiveness",
+      "valueRequired": true,
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      },
+      "workExample": {
+        "@id": "local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx"
+      }
+    },
+    {
+      "@id": "#comparative-analysis-report",
+      "@type": "FormalParameter",
+      "name": "Interactive HTML report with comparative analysis",
+      "description": "Interactive HTML report comparing the input reports on vaccine effectiveness in different regions",
+      "additionalType": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      },
+      "workExample": {
+        "@id": "BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html"
+      }
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile",
+      "@type": "File",
+      "name": "Dockerfile",
+      "description": "Dockerfile which may be used to create a container image for the workflow.",
+      "conformsTo": "https://docs.docker.com/reference/dockerfile/",
+      "encodingFormat": [
+        "text/plain",
+        "http://edamontology.org/format_1964"
+      ],
+      "isPartOf": {
+        "@id": "https://doi.org/10.48546/workflowhub.workflow.502.4"
+      }
+    },
+    {
+      "@id": "#container",
+      "@type": "FormalParameter",
+      "name": "A container with all pipeline dependencies installed",
+      "additionalType": "ContainerImage",
+      "workExample": {
+        "@id": "https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/pkgs/container/vaccine_effectiveness_analytical_pipeline_gui"
+      }
+    },
+    {
+      "@id": "https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/pkgs/container/vaccine_effectiveness_analytical_pipeline_gui",
+      "@type": "CreativeWork",
+      "name": "by-covid/vaccine_effectiveness_analytical_pipeline_gui",
+      "description": "Docker container with workflow dependencies installed. Not used for the workflows but is built from the same Dockerfile.",
+      "registry": "ghcr.io",
+      "tag": "sha256:3a3ca9a6039c4bfa4d98e4a88deb2f6e7685a0bf593a3d3a70dafea42a3ac087",
+      "sha256": "3a3ca9a6039c4bfa4d98e4a88deb2f6e7685a0bf593a3d3a70dafea42a3ac087",
+      "exampleOfWork": "#container"
+    },
+    {
+      "@id": "#vaccine-effectiveness-aragon-126e7f43-fd41-45f0-b305-91f33b798ada",
+      "@type": "File",
+      "name": "Vaccine effectiveness data for Aragon region",
+      "temporalCoverage": "2020-03-01/2023-04-18",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/3336899/"
+      },
+      "description": "This entity is a placeholder as the raw data cannot be published for privacy reasons. All individuals vaccinated with at least one dose of the SARS-CoV-2 vaccine (any of the available brands) and all individuals eligible to be vaccinated with a documented positive diagnosis (irrespective of the type of test) for SARS-CoV-2 infection during the data extraction period are included in the study population.",
+      "exampleOfWork": "#vaccine-effectiveness-data"
+    },
+    {
+      "@id": "#container-aragon-f10ce172-e522-49c0-a9df-506932ea42c4",
+      "@type": "ContainerImage",
+      "additionalType": "DockerImage",
+      "name": "Docker container for Aragon region workflow run",
+      "description": "Docker container built by IACS from the workflow Dockerfile. This entity is a placeholder as the original container was not preserved.",
+      "author": {
+        "@id": "https://ror.org/05p0enq35"
+      },
+      "exampleOfWork": "#container",
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277",
+      "@type": "File",
+      "name": "Vaccine effectiveness data for Brussels and Wallonia regions",
+      "temporalCoverage": "2020-09-01/2024-04-05",
+      "spatialCoverage": [
+        {
+          "@id": "https://sws.geonames.org/2800867/"
+        },
+        {
+          "@id": "https://sws.geonames.org/3337387/"
+        }
+      ],
+      "description": "This entity is a placeholder as the raw data cannot be published for privacy reasons. All individuals vaccinated with at least one dose of the SARS-CoV-2 vaccine (any of the available brands) and all individuals eligible to be vaccinated with a documented positive diagnosis (irrespective of the type of test) for SARS-CoV-2 infection during the data extraction period are included in the study population.",
+      "exampleOfWork": "#vaccine-effectiveness-data"
+    },
+    {
+      "@id": "#environment-brussels-wallonia-0179aa73-5217-40f8-8adc-1919a3ca716c",
+      "@type": "SoftwareApplication",
+      "name": "Environment for Brussels and Wallonia region workflow run",
+      "description": "Environment manually configured by Sciensano by installing packages from zipfiles. This entity is a placeholder as the original environment was not preserved.",
+      "author": {
+        "@id": "https://ror.org/04ejags36"
+      }
+    },
+    {
+      "@id": "#vaccine-effectiveness-finland-1ade950f-234d-44f8-b2a4-71c5ca8480b3",
+      "@type": "File",
+      "name": "Vaccine effectiveness data for Finland region",
+      "temporalCoverage": "2020-01-01/2022-12-20",
+      "spatialCoverage": {
+        "@id": "https://sws.geonames.org/660013/"
+      },
+      "description": "This entity is a placeholder as the raw data cannot be published for privacy reasons. All individuals vaccinated with at least one dose of the SARS-CoV-2 vaccine (any of the available brands) and all individuals eligible to be vaccinated with a documented positive diagnosis (irrespective of the type of test) for SARS-CoV-2 infection during the data extraction period are included in the study population.",
+      "exampleOfWork": "#vaccine-effectiveness-data"
+    },
+    {
+      "@id": "#container-finland-3fdab2cf-6b6b-4473-8f79-453fbd32a472",
+      "@type": "ContainerImage",
+      "additionalType": "SIFImage",
+      "name": "Singularity Container for Finland region workflow run",
+      "description": "Container built by THL from the workflow Dockerfile. This entity is a placeholder as the original container was not preserved.",
+      "author": {
+        "@id": "https://ror.org/03tf0c761"
+      },
+      "exampleOfWork": "#container",
+      "buildInstructions": {
+        "@id": "https://workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_3620"
+      }
+    },
+    {
+      "@id": "#R-profile",
+      "@type": [
+        "FormalParameter",
+        "SoftwareSourceCode"
+      ],
+      "additionalType": "File",
+      "name": "R profile",
+      "workExample": {
+        "@id": ".Rprofile"
+      }
+    },
+    {
+      "@id": "http://edamontology.org/format_3464",
+      "@type": "DefinedTerm",
+      "name": "JSON"
+    },
+    {
+      "@id": "#R-lockfile",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "R environment lockfile",
+      "workExample": {
+        "@id": "renv.lock"
+      }
+    },
+    {
+      "@id": "#R-environment",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "name": "R environment",
+      "workExample": {
+        "@id": "renv/"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/1_DQA.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/2_validation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/3_imputation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/4_matching.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/5_descriptive.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Aragon_1.0.0/6_survival-analysis.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/1_DQA.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/2_validation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/3_imputation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/4_matching.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/5_descriptives.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Brussels-Wallonia_1.0.0/6_survival-analysis.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/1_DQA.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/2_validation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/3_imputation.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/4_matching.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/5_descriptive.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "local_outputs/Finland_1.0.0/6_survival-analysis.html",
+      "@type": "File",
+      "encodingFormat": {
+        "@id": "http://edamontology.org/format_2331"
+      }
+    },
+    {
+      "@id": "https://quarto.org/docs/download/",
+      "@type": "SoftwareApplication",
+      "name": "Quarto",
+      "url": "https://quarto.org/"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.1",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Process Run Crate",
+      "version": "0.1"
+    },
+    {
+      "@id": "http://edamontology.org/format_1964",
+      "@type": "DefinedTerm",
+      "name": "plain text format (unformatted)"
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html@0.1/dist/ro-crate-dynamic.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h4>
+<h3 class="item_name">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</h3>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+            <div>
+                <h3> BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</h3>
+                
+                
+                
+                
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>This publication corresponds to the <strong>local outputs</strong> and <strong>comparative analysis</strong>&nbsp;of the Baseline Use Case proposed in T.5.2 (WP5) in the&nbsp;<a href="https://by-covid.org/">BY-COVID project</a>&nbsp;on&nbsp;&ldquo;<em>SARS-CoV-2&nbsp;Vaccine&nbsp;effectiveness in preventing SARS-CoV-2 infection.</em>&rdquo;</p>
+<p><strong>Research question</strong>: "<em>How effective have the SARS-CoV-2 vaccination programmes been in preventing SARS-CoV-2 infections?</em>&rdquo;</p>
+<p><strong>Study design</strong>: An observational retrospective longitudinal (cohort) study using routinely collected population, health and care data from several countries/regions in Europe. We have designed the observational study to emulate a hypothetical Target Trial (TT) of the causal effect of SARS-CoV-2 vaccination programs in preventing SARS-CoV-2 infections.</p>
+<p>A <strong>federated analysis</strong> approach was adopted, with the secured distributed deployment of the interoperable analytical pipeline by different Participant Nodes (i.e., institutions hosting or having access to the required individual-level data). A detailed description of the data processing procedures and the security measures within the Secured Processing Environments (SPE) of each of the Participant Nodes is provided in the published <a href="../doi/10.5281/zenodo.7625783">Data Management Plan (DMP)</a>. For more details on the methodological approach, see <a href="https://doi.org/10.1186/s12874-023-02068-3">here</a>.&nbsp;</p>
+<p>The&nbsp;<strong>local outputs</strong> correspond with the <em>interactive reports</em> of each main step of the analytical pipeline described in '<a href="https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case/blob/main/vaccine_effectiveness_analytical_pipeline/documentation/BY-COVID-WP5-BaselineUseCase-VE-documentation-analytical-pipeline.pdf">Methods analytical pipeline</a>' and an <em>Excel file</em> used as input for the comparative analysis. They have been produced using real-world data from public health and the national health system in Aragon (Spain), Brussels and Wallonia (Belgium), and Finland.&nbsp;</p>
+<p>The <strong>scripts </strong>implementing the statistical analyses in the analytical pipeline are available on&nbsp;<a href="https://github.com/by-covid/BY-COVID_WP5_T5.2_baseline-use-case">GitHub</a>, with additional documentation supporting the development and implementation of the baseline use case.&nbsp;</p>
+<p><strong>Files </strong>included in this publication:&nbsp;</p>
+<ul>
+<li><strong><em>Local outputs produced by each Participant Node: </em></strong><em>6 interactive HTML reports (Human-readable, interactive report) + 1 XLSX file (Human-readable, Excel)</em>
+<ul>
+<li>Aragon v.1.0.0</li>
+<li>Brussels-Wallonia v.1.0.0</li>
+<li>Finland v.1.0.0&nbsp;</li>
+</ul>
+</li>
+<li><strong><em>Comparative analysis</em></strong>:&nbsp;
+<ul>
+<li>SARS-CoV-2 vaccine effectiveness comparative analysis results v.1.0.1 (HTML) - Interactive report</li>
+<li>SARS-CoV-2 vaccine effectiveness comparative analysis execution script v.1.0.1 (QMD) - Quarto RMarkdown script to execute the comparative analysis and produce the interactive report</li>
+</ul>
+</li>
+<li><strong><em>Reproducible environment using renv:</em></strong>
+<ul>
+<li>renv/ - Project environment with activation scripts</li>
+<li>renv.lock - Lockfile</li>
+<li>.Rprofile - Project R profile</li>
+</ul>
+</li>
+</ul></span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">funder<span>&nbsp;</span><a href="http://schema.org/funder">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/00k4n6c32">European Commission</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2024-08-01</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//orcid.org/0000-0002-4409-0664">Marjan Meurisse</a></li>
+                        
+                        <li><a href="#https%3A//orcid.org/0000-0002-6285-8120">Francisco Estupiñán-Romero</a></li>
+                        
+                        <li><a href="#https%3A//orcid.org/0000-0001-7316-6990">Nina Van Goethem</a></li>
+                        
+                        <li><a href="#https%3A//orcid.org/0000-0003-4842-1667">Markus Perola</a></li>
+                        
+                        <li><a href="#https%3A//orcid.org/0000-0003-3499-4800">Teemu Paajanen</a></li>
+                        
+                        <li><a href="#https%3A//orcid.org/0000-0002-8783-5478">Javier González-Galindo</a></li>
+                        
+                        <li><a href="#https%3A//orcid.org/0000-0002-0961-3298">Enrique Bernal-Delgado</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">identifier<span>&nbsp;</span><a href="http://schema.org/identifier">[?]</a></th>
+            <td style='text-align:left'><a href="https://doi.org/10.5281/zenodo.11209362">https://doi.org/10.5281/zenodo.11209362</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//w3id.org/workflowhub/workflow-ro-crate/1.0">Workflow RO-Crate</a></li>
+                        
+                        <li><a href="#https%3A//w3id.org/ro/wfrun/process/0.5">Process Run Crate</a></li>
+                        
+                        <li><a href="#https%3A//w3id.org/ro/wfrun/workflow/0.5">Workflow Run Crate</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//spdx.org/licenses/CC-BY-4.0">Creative Commons Attribution 4.0 International</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//zenodo.org">Zenodo</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">inLanguage<span>&nbsp;</span><a href="http://schema.org/inLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//glottolog.org/resource/languoid/id/stan1293">English</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">temporalCoverage<span>&nbsp;</span><a href="http://schema.org/temporalCoverage">[?]</a></th>
+            <td style='text-align:left'><span>2020-03-01/2022-12-20</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//sws.geonames.org/2800867/">Brussels-Capital, Belgium</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/3336899/">Aragon, Spain</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/3337387/">Wallonia, Belgium</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/660013/">Finland</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">keywords<span>&nbsp;</span><a href="http://schema.org/keywords">[?]</a></th>
+            <td style='text-align:left'><span>COVID-19, Comparative effectiveness, International comparison, Causal inference, SARS-CoV-2</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">funding<span>&nbsp;</span><a href="http://schema.org/funding">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//doi.org/10.3030/101046203">BY-COVID - Beyond COVID (101046203)</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//doi.org/10.48546/workflowhub.workflow.502.4">BY-COVID WP5 T5.2 Baseline Use Case</a></li>
+                        
+                        <li><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD</a></li>
+                        
+                        <li><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</a></li>
+                        
+                        <li><a href="#.Rprofile">R environment profile</a></li>
+                        
+                        <li><a href="#renv/">R environment with activation scripts</a></li>
+                        
+                        <li><a href="#renv.lock">R environment lockfile</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/">local_outputs/Aragon_1.0.0/</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/">local_outputs/Brussels-Wallonia_1.0.0/</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/">local_outputs/Finland_1.0.0/</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//doi.org/10.48546/workflowhub.workflow.502.4">BY-COVID WP5 T5.2 Baseline Use Case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307">Run Workflow (Aragon region)</a></li>
+                        
+                        <li><a href="#%23run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c">Run Workflow (Brussels and Wallonia regions)</a></li>
+                        
+                        <li><a href="#%23run-finland-740ece65-d94b-4247-8622-75d7b06c5512">Run Workflow (Finland region)</a></li>
+                        
+                        <li><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://ror.org/00k4n6c32">Go to: </a> European Commission</h3>
+                
+                
+                
+                
+        <div id="https://ror.org/00k4n6c32">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://ror.org/00k4n6c32">https://ror.org/00k4n6c32</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>European Commission</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Organization</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">funder<span>&nbsp;</span><a href="http://schema.org/funder">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></li>
+                        
+                        <li><a href="#https%3A//doi.org/10.3030/101046203">BY-COVID - Beyond COVID (101046203)</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0002-4409-0664">Go to: </a> Marjan Meurisse</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0002-4409-0664">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0002-4409-0664">https://orcid.org/0000-0002-4409-0664</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Marjan Meurisse</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>Meurisse</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Marjan</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/04ejags36">Sciensano</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c">Run Workflow (Brussels and Wallonia regions)</a></li>
+                        
+                        <li><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0002-6285-8120">Go to: </a> Francisco Estupiñán-Romero</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0002-6285-8120">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0002-6285-8120">https://orcid.org/0000-0002-6285-8120</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Francisco Estupiñán-Romero</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>Estupiñán-Romero</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Francisco</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/05p0enq35">Instituto Aragonés de Ciencias de la Salud</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0001-7316-6990">Go to: </a> Nina Van Goethem</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0001-7316-6990">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0001-7316-6990">https://orcid.org/0000-0001-7316-6990</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Nina Van Goethem</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>Van Goethem</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Nina</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/04ejags36">Sciensano</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0003-4842-1667">Go to: </a> Markus Perola</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0003-4842-1667">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0003-4842-1667">https://orcid.org/0000-0003-4842-1667</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Markus Perola</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>Perola</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Markus</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/03tf0c761">Terveyden ja hyvinvoinnin laitos</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0003-3499-4800">Go to: </a> Teemu Paajanen</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0003-3499-4800">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0003-3499-4800">https://orcid.org/0000-0003-3499-4800</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Teemu Paajanen</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>Paajanen</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Teemu</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/03tf0c761">Terveyden ja hyvinvoinnin laitos</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-finland-740ece65-d94b-4247-8622-75d7b06c5512">Run Workflow (Finland region)</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0002-8783-5478">Go to: </a> Javier González-Galindo</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0002-8783-5478">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0002-8783-5478">https://orcid.org/0000-0002-8783-5478</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Javier González-Galindo</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>González-Galindo</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Javier</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/05p0enq35">Instituto Aragonés de Ciencias de la Salud</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307">Run Workflow (Aragon region)</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://orcid.org/0000-0002-0961-3298">Go to: </a> Enrique Bernal-Delgado</h3>
+                
+                
+                
+                
+        <div id="https://orcid.org/0000-0002-0961-3298">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://orcid.org/0000-0002-0961-3298">https://orcid.org/0000-0002-0961-3298</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Enrique Bernal-Delgado</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">familyName<span>&nbsp;</span><a href="http://schema.org/familyName">[?]</a></th>
+            <td style='text-align:left'><span>Bernal-Delgado</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">givenName<span>&nbsp;</span><a href="http://schema.org/givenName">[?]</a></th>
+            <td style='text-align:left'><span>Enrique</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Person</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/05p0enq35">Instituto Aragonés de Ciencias de la Salud</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.0">Go to: </a> Workflow RO-Crate</h3>
+                
+                
+                
+                
+        <div id="https://w3id.org/workflowhub/workflow-ro-crate/1.0">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.0">https://w3id.org/workflowhub/workflow-ro-crate/1.0</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow RO-Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreativeWork</span></li>
+                        
+                        <li><span>Profile</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>1.0</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></li>
+                        
+                        <li><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://w3id.org/ro/wfrun/process/0.5">Go to: </a> Process Run Crate</h3>
+                
+                
+                
+                
+        <div id="https://w3id.org/ro/wfrun/process/0.5">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/wfrun/process/0.5">https://w3id.org/ro/wfrun/process/0.5</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Process Run Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreativeWork</span></li>
+                        
+                        <li><span>Profile</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>0.5</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://w3id.org/ro/wfrun/workflow/0.5">Go to: </a> Workflow Run Crate</h3>
+                
+                
+                
+                
+        <div id="https://w3id.org/ro/wfrun/workflow/0.5">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/wfrun/workflow/0.5">https://w3id.org/ro/wfrun/workflow/0.5</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow Run Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreativeWork</span></li>
+                        
+                        <li><span>Profile</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>0.5</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://spdx.org/licenses/CC-BY-4.0">Go to: </a> Creative Commons Attribution 4.0 International</h3>
+                
+                
+                
+                
+        <div id="https://spdx.org/licenses/CC-BY-4.0">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://spdx.org/licenses/CC-BY-4.0">https://spdx.org/licenses/CC-BY-4.0</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Creative Commons Attribution 4.0 International</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreativeWork</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">url<span>&nbsp;</span><a href="http://schema.org/url">[?]</a></th>
+            <td style='text-align:left'><a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://zenodo.org">Go to: </a> Zenodo</h3>
+                
+                
+                
+                
+        <div id="https://zenodo.org">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://zenodo.org">https://zenodo.org</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Zenodo</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Organization</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://glottolog.org/resource/languoid/id/stan1293">Go to: </a> English</h3>
+                
+                
+                
+                
+        <div id="https://glottolog.org/resource/languoid/id/stan1293">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://glottolog.org/resource/languoid/id/stan1293">https://glottolog.org/resource/languoid/id/stan1293</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>English</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Language</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">alternateName<span>&nbsp;</span><a href="http://schema.org/alternateName">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><span>eng</span></li>
+                        
+                        <li><span>en</span></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">inLanguage<span>&nbsp;</span><a href="http://schema.org/inLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://sws.geonames.org/2800867/">Go to: </a> Brussels-Capital, Belgium</h3>
+                
+                
+                
+                
+        <div id="https://sws.geonames.org/2800867/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://sws.geonames.org/2800867/">https://sws.geonames.org/2800867/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Brussels-Capital, Belgium</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>AdministrativeArea</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></li>
+                        
+                        <li><a href="#%23vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277">Vaccine effectiveness data for Brussels and Wallonia regions</a></li>
+                        
+                        <li><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/">local_outputs/Brussels-Wallonia_1.0.0/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://sws.geonames.org/3336899/">Go to: </a> Aragon, Spain</h3>
+                
+                
+                
+                
+        <div id="https://sws.geonames.org/3336899/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://sws.geonames.org/3336899/">https://sws.geonames.org/3336899/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Aragon, Spain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>AdministrativeArea</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></li>
+                        
+                        <li><a href="#%23vaccine-effectiveness-aragon-126e7f43-fd41-45f0-b305-91f33b798ada">Vaccine effectiveness data for Aragon region</a></li>
+                        
+                        <li><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/">local_outputs/Aragon_1.0.0/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://sws.geonames.org/3337387/">Go to: </a> Wallonia, Belgium</h3>
+                
+                
+                
+                
+        <div id="https://sws.geonames.org/3337387/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://sws.geonames.org/3337387/">https://sws.geonames.org/3337387/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Wallonia, Belgium</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>AdministrativeArea</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></li>
+                        
+                        <li><a href="#%23vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277">Vaccine effectiveness data for Brussels and Wallonia regions</a></li>
+                        
+                        <li><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/">local_outputs/Brussels-Wallonia_1.0.0/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://sws.geonames.org/660013/">Go to: </a> Finland</h3>
+                
+                
+                
+                
+        <div id="https://sws.geonames.org/660013/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://sws.geonames.org/660013/">https://sws.geonames.org/660013/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Finland</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Country</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></li>
+                        
+                        <li><a href="#%23vaccine-effectiveness-finland-1ade950f-234d-44f8-b2a4-71c5ca8480b3">Vaccine effectiveness data for Finland region</a></li>
+                        
+                        <li><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/">local_outputs/Finland_1.0.0/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://doi.org/10.3030/101046203">Go to: </a> BY-COVID - Beyond COVID (101046203)</h3>
+                
+                
+                
+                
+        <div id="https://doi.org/10.3030/101046203">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://doi.org/10.3030/101046203">https://doi.org/10.3030/101046203</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>BY-COVID - Beyond COVID (101046203)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Grant</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">funder<span>&nbsp;</span><a href="http://schema.org/funder">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/00k4n6c32">European Commission</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">funding<span>&nbsp;</span><a href="http://schema.org/funding">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://doi.org/10.48546/workflowhub.workflow.502.4">Go to: </a> BY-COVID WP5 T5.2 Baseline Use Case</h3>
+                
+                
+                
+                
+        <div id="https://doi.org/10.48546/workflowhub.workflow.502.4">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://doi.org/10.48546/workflowhub.workflow.502.4">https://doi.org/10.48546/workflowhub.workflow.502.4</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>BY-COVID WP5 T5.2 Baseline Use Case</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>Dataset</span></li>
+                        
+                        <li><span>ComputationalWorkflow</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>This workflow is a separate RO-Crate available through WorkflowHub.</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="https://w3id.org/ro/crate">https://w3id.org/ro/crate</a></li>
+                        
+                        <li><a href="https://w3id.org/ro/wfrun/process">https://w3id.org/ro/wfrun/process</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">url<span>&nbsp;</span><a href="http://schema.org/url">[?]</a></th>
+            <td style='text-align:left'><a href="https://workflowhub.eu/workflows/502/">https://workflowhub.eu/workflows/502/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/502/ro_crate%3Fversion%3D4">https://workflowhub.eu/workflows/502/ro_crate?version=4</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>4</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">input<span>&nbsp;</span><a href="https://bioschemas.org/ComputationalWorkflow#input">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-data">Vaccine effectiveness data for a region</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">output<span>&nbsp;</span><a href="https://bioschemas.org/ComputationalWorkflow#output">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-reports">Collection of human-readable HTML and XLSX reports</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//quarto.org/">Quarto Markdown</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">isPartOf<span>&nbsp;</span><a href="http://schema.org/isPartOf">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/input/vaccine_effectiveness_synthetic_pop_10k_v.1.1.1.csv">Synthetic dataset with 10k entries (CSV).</a></li>
+                        
+                        <li><a href="#https%3A//workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile">Dockerfile</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307">Run Workflow (Aragon region)</a></li>
+                        
+                        <li><a href="#%23run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c">Run Workflow (Brussels and Wallonia regions)</a></li>
+                        
+                        <li><a href="#%23run-finland-740ece65-d94b-4247-8622-75d7b06c5512">Run Workflow (Finland region)</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD">⬇️ Download: </a> BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD</h3>
+                
+                
+                
+                
+        <div id="BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>File</span></li>
+                        
+                        <li><span>ComputationalWorkflow</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>1.0.1</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//quarto.org/">Quarto Markdown</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">input<span>&nbsp;</span><a href="https://bioschemas.org/ComputationalWorkflow#input">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-xlsx-reports">1 or more XLSX reports on regional vaccine effectiveness</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">output<span>&nbsp;</span><a href="https://bioschemas.org/ComputationalWorkflow#output">[?]</a></th>
+            <td style='text-align:left'><a href="#%23comparative-analysis-report">Interactive HTML report with comparative analysis</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">⬇️ Download: </a> BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</h3>
+                
+                <iframe src='BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html' width='100%' height='500'></iframe>
+                
+                
+        <div id="BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><a href="#http%3A//edamontology.org/format_2331">HTML</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">temporalCoverage<span>&nbsp;</span><a href="http://schema.org/temporalCoverage">[?]</a></th>
+            <td style='text-align:left'><span>2020-03-01/2022-12-20</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//sws.geonames.org/2800867/">Brussels-Capital, Belgium</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/3336899/">Aragon, Spain</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/3337387/">Wallonia, Belgium</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/660013/">Finland</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">workExample<span>&nbsp;</span><a href="http://schema.org/workExample">[?]</a></th>
+            <td style='text-align:left'><a href="#%23comparative-analysis-report">Interactive HTML report with comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href=".Rprofile">⬇️ Download: </a> R environment profile</h3>
+                
+                
+                
+                
+        <div id=".Rprofile">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>.Rprofile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>R environment profile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>File</span></li>
+                        
+                        <li><span>SoftwareSourceCode</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="https://cran.r-project.org">https://cran.r-project.org</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#%23R-profile">R profile</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">buildInstructions<span>&nbsp;</span><a href="https://codemeta.github.io/terms/buildInstructions">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">workExample<span>&nbsp;</span><a href="http://schema.org/workExample">[?]</a></th>
+            <td style='text-align:left'><a href="#%23R-profile">R profile</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> R environment with activation scripts</h3>
+                
+                
+                
+                
+        <div id="renv/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>renv/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>R environment with activation scripts</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>Dataset</span></li>
+                        
+                        <li><span>SoftwareSourceCode</span></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">buildInstructions<span>&nbsp;</span><a href="https://codemeta.github.io/terms/buildInstructions">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">workExample<span>&nbsp;</span><a href="http://schema.org/workExample">[?]</a></th>
+            <td style='text-align:left'><a href="#%23R-environment">R environment</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> R environment lockfile</h3>
+                
+                
+                
+                
+        <div id="renv.lock">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>renv.lock</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>R environment lockfile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><a href="#http%3A//edamontology.org/format_3464">JSON</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#%23R-lockfile">R environment lockfile</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">buildInstructions<span>&nbsp;</span><a href="https://codemeta.github.io/terms/buildInstructions">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">Aggregate and compare regional results</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">workExample<span>&nbsp;</span><a href="http://schema.org/workExample">[?]</a></th>
+            <td style='text-align:left'><a href="#%23R-lockfile">R environment lockfile</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> local_outputs/Aragon_1.0.0/</h3>
+                
+                
+                
+                
+        <div id="local_outputs/Aragon_1.0.0/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>local_outputs/Aragon_1.0.0/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//sws.geonames.org/3336899/">Aragon, Spain</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#local_outputs/Aragon_1.0.0/1_DQA.html">local_outputs/Aragon_1.0.0/1_DQA.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/2_validation.html">local_outputs/Aragon_1.0.0/2_validation.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/3_imputation.html">local_outputs/Aragon_1.0.0/3_imputation.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/4_matching.html">local_outputs/Aragon_1.0.0/4_matching.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/5_descriptive.html">local_outputs/Aragon_1.0.0/5_descriptive.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/6_survival-analysis.html">local_outputs/Aragon_1.0.0/6_survival-analysis.html</a></li>
+                        
+                        <li><a href="#local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx">local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">workExample<span>&nbsp;</span><a href="http://schema.org/workExample">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-reports">Collection of human-readable HTML and XLSX reports</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307">Run Workflow (Aragon region)</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> local_outputs/Brussels-Wallonia_1.0.0/</h3>
+                
+                
+                
+                
+        <div id="local_outputs/Brussels-Wallonia_1.0.0/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>local_outputs/Brussels-Wallonia_1.0.0/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//sws.geonames.org/2800867/">Brussels-Capital, Belgium</a></li>
+                        
+                        <li><a href="#https%3A//sws.geonames.org/3337387/">Wallonia, Belgium</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/1_DQA.html">local_outputs/Brussels-Wallonia_1.0.0/1_DQA.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/2_validation.html">local_outputs/Brussels-Wallonia_1.0.0/2_validation.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/3_imputation.html">local_outputs/Brussels-Wallonia_1.0.0/3_imputation.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/4_matching.html">local_outputs/Brussels-Wallonia_1.0.0/4_matching.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/5_descriptives.html">local_outputs/Brussels-Wallonia_1.0.0/5_descriptives.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/6_survival-analysis.html">local_outputs/Brussels-Wallonia_1.0.0/6_survival-analysis.html</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx">local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c">Run Workflow (Brussels and Wallonia regions)</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> local_outputs/Finland_1.0.0/</h3>
+                
+                
+                
+                
+        <div id="local_outputs/Finland_1.0.0/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>local_outputs/Finland_1.0.0/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">spatialCoverage<span>&nbsp;</span><a href="http://schema.org/spatialCoverage">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//sws.geonames.org/660013/">Finland</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#local_outputs/Finland_1.0.0/1_DQA.html">local_outputs/Finland_1.0.0/1_DQA.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/2_validation.html">local_outputs/Finland_1.0.0/2_validation.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/3_imputation.html">local_outputs/Finland_1.0.0/3_imputation.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/4_matching.html">local_outputs/Finland_1.0.0/4_matching.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/5_descriptive.html">local_outputs/Finland_1.0.0/5_descriptive.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/6_survival-analysis.html">local_outputs/Finland_1.0.0/6_survival-analysis.html</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx">local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#%23run-finland-740ece65-d94b-4247-8622-75d7b06c5512">Run Workflow (Finland region)</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> Run Workflow (Aragon region)</h3>
+                
+                
+                
+                
+        <div id="#run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#run-aragon-a8413d1e-2c66-44fb-99e5-7404a1007307</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Run Workflow (Aragon region)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreateAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Run on a Docker container and executed manually, script by script, due to limitations of the secure research environment in which the input data could be accessed.</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//doi.org/10.48546/workflowhub.workflow.502.4">BY-COVID WP5 T5.2 Baseline Use Case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">containerImage<span>&nbsp;</span><a href="https://w3id.org/ro/terms/workflow-run#containerImage">[?]</a></th>
+            <td style='text-align:left'><a href="#%23container-aragon-f10ce172-e522-49c0-a9df-506932ea42c4">Docker container for Aragon region workflow run</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">buildInstructions<span>&nbsp;</span><a href="https://codemeta.github.io/terms/buildInstructions">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile">Dockerfile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">provider<span>&nbsp;</span><a href="http://schema.org/provider">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/05p0enq35">Instituto Aragonés de Ciencias de la Salud</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-8783-5478">Javier González-Galindo</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-aragon-126e7f43-fd41-45f0-b305-91f33b798ada">Vaccine effectiveness data for Aragon region</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#local_outputs/Aragon_1.0.0/">local_outputs/Aragon_1.0.0/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><span>CompletedActionStatus</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> Run Workflow (Brussels and Wallonia regions)</h3>
+                
+                
+                
+                
+        <div id="#run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#run-brussels-wallonia-4958dba2-affb-4998-84cf-c9f18bb3d24c</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Run Workflow (Brussels and Wallonia regions)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreateAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//doi.org/10.48546/workflowhub.workflow.502.4">BY-COVID WP5 T5.2 Baseline Use Case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">environment<span>&nbsp;</span><a href="https://w3id.org/ro/terms/workflow-run#environment">[?]</a></th>
+            <td style='text-align:left'><a href="#%23environment-brussels-wallonia-0179aa73-5217-40f8-8adc-1919a3ca716c">Environment for Brussels and Wallonia region workflow run</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">provider<span>&nbsp;</span><a href="http://schema.org/provider">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/04ejags36">Sciensano</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-4409-0664">Marjan Meurisse</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-brussels-wallonia-349a15bd-692d-42f5-86f3-98c55778a277">Vaccine effectiveness data for Brussels and Wallonia regions</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#local_outputs/Brussels-Wallonia_1.0.0/">local_outputs/Brussels-Wallonia_1.0.0/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><span>CompletedActionStatus</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> Run Workflow (Finland region)</h3>
+                
+                
+                
+                
+        <div id="#run-finland-740ece65-d94b-4247-8622-75d7b06c5512">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#run-finland-740ece65-d94b-4247-8622-75d7b06c5512</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Run Workflow (Finland region)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreateAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//doi.org/10.48546/workflowhub.workflow.502.4">BY-COVID WP5 T5.2 Baseline Use Case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">containerImage<span>&nbsp;</span><a href="https://w3id.org/ro/terms/workflow-run#containerImage">[?]</a></th>
+            <td style='text-align:left'><a href="#%23container-finland-3fdab2cf-6b6b-4473-8f79-453fbd32a472">Singularity Container for Finland region workflow run</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">buildInstructions<span>&nbsp;</span><a href="https://codemeta.github.io/terms/buildInstructions">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/502/git/4/raw/vaccine_effectiveness_analytical_pipeline/Dockerfile">Dockerfile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">provider<span>&nbsp;</span><a href="http://schema.org/provider">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/03tf0c761">Terveyden ja hyvinvoinnin laitos</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0003-3499-4800">Teemu Paajanen</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">startTime<span>&nbsp;</span><a href="http://schema.org/startTime">[?]</a></th>
+            <td style='text-align:left'><span>2024-04-19T05:33:49</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">endTime<span>&nbsp;</span><a href="http://schema.org/endTime">[?]</a></th>
+            <td style='text-align:left'><span>2024-04-19T16:47:05</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%23vaccine-effectiveness-finland-1ade950f-234d-44f8-b2a4-71c5ca8480b3">Vaccine effectiveness data for Finland region</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#local_outputs/Finland_1.0.0/">local_outputs/Finland_1.0.0/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><span>CompletedActionStatus</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> Aggregate and compare regional results</h3>
+                
+                
+                
+                
+        <div id="#run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#run-aggregation-a8413d1e-2c66-44fb-99e5-7404a1007307</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Aggregate and compare regional results</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreateAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.QMD</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">buildInstructions<span>&nbsp;</span><a href="https://codemeta.github.io/terms/buildInstructions">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#renv.lock">R environment lockfile</a></li>
+                        
+                        <li><a href="#.Rprofile">R environment profile</a></li>
+                        
+                        <li><a href="#renv/">R environment with activation scripts</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-4409-0664">Marjan Meurisse</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx">local_outputs/Aragon_1.0.0/results-survival-analysis-ESP.xlsx</a></li>
+                        
+                        <li><a href="#local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx">local_outputs/Brussels-Wallonia_1.0.0/results-survival-analysis-BEL.xlsx</a></li>
+                        
+                        <li><a href="#local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx">local_outputs/Finland_1.0.0/results-survival-analysis-FIN.xlsx</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html">BY-COVID_WP5_Baseline-Use-Case_Comparative-analysis_v.1.0.1.html</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><span>CompletedActionStatus</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">BY-COVID - WP5 - Baseline Use Case: SARS-CoV-2 vaccine effectiveness assessment - Local outputs and comparative analysis</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>
